@@ -1,7 +1,6 @@
 class AchievementsController < ApplicationController
 
   def new
-    @moods = Mood.all
     @exercice = Exercice.find(params[:exercice_id])
     @achievement = Achievement.new
   end
