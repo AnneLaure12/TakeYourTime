@@ -1,0 +1,6 @@
+<h1> Achievement#new </h1>
+
+<%= simple_form_for [@exercice, @achievement] do |f| %>
+  <%= f.association :moods, as: :radio_buttons%>
+  <%= f.button :submit %>
+<% end %>

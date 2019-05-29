@@ -1,1 +1,9 @@
-<h1>Index#exercices</h1>
+<h1>Index#exercises</h1>
+
+<% @exercices.each do | exercice | %>
+  <%= link_to exercice_path(exercice) do %>
+    <ul>
+      <li> <%= exercice.name %> </li>
+    </ul>
+  <% end %>
+<% end %>
