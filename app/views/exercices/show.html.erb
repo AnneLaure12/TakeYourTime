@@ -4,3 +4,7 @@
 <%= @exercice.description %>
 
 <%= link_to 'shuffle!', exercice_path(select_another_exos(@exercices, @exercice, @mood)) %>
+
+<%= simple_form_for @achievement do |f| %>
+<%= f.input :field, as: :slider, min: 0, max: 10, step: 2, orientation: 'horizontal', range: true, ticks: [0, 5, 10] %>
+<% end %>
