@@ -1,5 +1,6 @@
-<h1>Show#Exercices</h1>
+<h1>Show#Exercises</h1>
 
-<% @exercices.each do |exercice| %>
-<%=exercice.name %>
-<% end %>
+<%= @exercice.name %>
+<%= @exercice.description %>
+
+<%= link_to 'shuffle!', exercice_path(select_another_exos(@exercices, @exercice, @mood)) %>
