@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_28_130157) do
+ActiveRecord::Schema.define(version: 2019_05_29_144323) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,13 +19,13 @@ ActiveRecord::Schema.define(version: 2019_05_28_130157) do
     t.date "date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "init_mood_id"
-    t.bigint "final_mood_id"
+    t.integer "rating"
     t.bigint "user_id"
     t.bigint "exercice_id"
+    t.bigint "mood_id"
     t.index ["exercice_id"], name: "index_achievements_on_exercice_id"
-    t.index ["final_mood_id"], name: "index_achievements_on_final_mood_id"
-    t.index ["init_mood_id"], name: "index_achievements_on_init_mood_id"
+    t.index ["mood_id"], name: "index_achievements_on_mood_id"
+    t.index ["rating"], name: "index_achievements_on_rating"
     t.index ["user_id"], name: "index_achievements_on_user_id"
   end
 
