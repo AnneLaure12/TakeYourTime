@@ -29,6 +29,7 @@ mood2 = Mood.create!(name: "happy")
 #exos2.save
 
 #Cas 2
+exo0 = Exercice.create!(name: "Respiration", description: "exercices de respiration", mood: mood1)
 exo1 = Exercice.create!(name: "Yoga", description: "postures de yoga", mood: mood1)
 exo2 = Exercice.create!(name: "Meditiation", description: "exercices de meditation", mood: mood2)
 
