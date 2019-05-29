@@ -5,5 +5,6 @@ class ExercicesController < ApplicationController
 
   def show
     @exercice = Exercice.find(params[:id])
+    @mood = @exercice.mood
   end
 end

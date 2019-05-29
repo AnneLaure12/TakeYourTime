@@ -1,3 +1,10 @@
 <h1>Moods#index</h1>
 
-
+MOODS LIST
+<ul>
+<% @moods.each do |mood| %>
+<%= link_to exercice_path(select_exos(@exercices, mood)) do %>
+ <li><h1><%= mood.name %></li></h1>
+<% end %>
+<% end %>
+</ul>
