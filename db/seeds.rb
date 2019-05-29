@@ -8,7 +8,7 @@
 
 puts 'Start destroy'
 User.destroy_all
-Exercice.destroy_all
+exercise.destroy_all
 Mood.destroy_all
 Achievement.destroy_all
 puts "Finish destroy"
@@ -21,22 +21,22 @@ mood1 = Mood.create!(name: "stressed")
 mood2 = Mood.create!(name: "happy")
 
 #Cas 1
-#exos1 = Exercice.new(name: "Yoga", description: "postures de yoga" )
+#exos1 = exercise.new(name: "Yoga", description: "postures de yoga" )
 #exos1.mood = mood1
 #exos1.save
-#exos2 = Exercice.new(name: "Meditiation", description: "exercices de meditation")
+#exos2 = exercise.new(name: "Meditiation", description: "exercises de meditation")
 #exos2.mood = mood2
 #exos2.save
 
 #Cas 2
-exo1 = Exercice.create!(name: "Yoga", description: "postures de yoga", mood: mood1)
-exo2 = Exercice.create!(name: "Meditiation", description: "exercices de meditation", mood: mood2)
+exo1 = exercise.create!(name: "Yoga", description: "postures de yoga", mood: mood1)
+exo2 = exercise.create!(name: "Meditiation", description: "exercises de meditation", mood: mood2)
 
 #Cas 3
-#mood1.exercices.create!(name: "Yoga", description: "postures de yoga")
+#mood1.exercises.create!(name: "Yoga", description: "postures de yoga")
 
-Achievement.create!(date: "10/05/2019", init_mood: mood1, final_mood: mood2, user: user1, exercice: exo1)
-Achievement.create!(date: "28/05/2019", init_mood: mood1, final_mood: mood2, user: user2, exercice: exo2)
+Achievement.create!(date: "10/05/2019", init_mood: mood1, final_mood: mood2, user: user1, exercise: exo1)
+Achievement.create!(date: "28/05/2019", init_mood: mood1, final_mood: mood2, user: user2, exercise: exo2)
 
 puts "Finished !"
 

@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   resources :moods, only: [:index]
 
-  resources :exercices, only: [:index, :show] do
+  resources :exercises, only: [:index, :show] do
     resources :achievements, only: [:create]
   end
   resources :achievements, only: [:index]

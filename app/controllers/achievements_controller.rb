@@ -6,8 +6,8 @@ class AchievementsController < ApplicationController
   def
 
   def create
-    @exercice = Exercice.find(params[:id])
-    @achievement = Achievement.new(params[@exercice])
+    @exercise = exercise.find(params[:id])
+    @achievement = Achievement.new(params[@exercise])
     @achievement.user = current_user
     if @achievement.save
       redirect_to achievements_path

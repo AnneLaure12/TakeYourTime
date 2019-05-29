@@ -1,6 +1,6 @@
 class MoodsController < ApplicationController
   def index
     @moods = Mood.all
-    @exercices = Exercice.all
+    @exercises = exercise.all
   end
 end

@@ -22,14 +22,14 @@ ActiveRecord::Schema.define(version: 2019_05_28_130157) do
     t.bigint "init_mood_id"
     t.bigint "final_mood_id"
     t.bigint "user_id"
-    t.bigint "exercice_id"
-    t.index ["exercice_id"], name: "index_achievements_on_exercice_id"
+    t.bigint "exercise_id"
+    t.index ["exercise_id"], name: "index_achievements_on_exercise_id"
     t.index ["final_mood_id"], name: "index_achievements_on_final_mood_id"
     t.index ["init_mood_id"], name: "index_achievements_on_init_mood_id"
     t.index ["user_id"], name: "index_achievements_on_user_id"
   end
 
-  create_table "exercices", force: :cascade do |t|
+  create_table "exercises", force: :cascade do |t|
     t.string "name"
     t.text "description"
     t.string "photo"
@@ -37,7 +37,7 @@ ActiveRecord::Schema.define(version: 2019_05_28_130157) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "mood_id"
-    t.index ["mood_id"], name: "index_exercices_on_mood_id"
+    t.index ["mood_id"], name: "index_exercises_on_mood_id"
   end
 
   create_table "moods", force: :cascade do |t|
@@ -62,7 +62,7 @@ ActiveRecord::Schema.define(version: 2019_05_28_130157) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "achievements", "exercices"
+  add_foreign_key "achievements", "exercises"
   add_foreign_key "achievements", "users"
-  add_foreign_key "exercices", "moods"
+  add_foreign_key "exercises", "moods"
 end

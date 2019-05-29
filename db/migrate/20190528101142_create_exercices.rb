@@ -1,6 +1,6 @@
-class CreateExercices < ActiveRecord::Migration[5.2]
+class Createexercises < ActiveRecord::Migration[5.2]
   def change
-    create_table :exercices do |t|
+    create_table :exercises do |t|
       t.string :name
       t.text :description
       t.string :photo
