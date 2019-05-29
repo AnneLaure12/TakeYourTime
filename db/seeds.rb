@@ -36,8 +36,8 @@ exo2 = Exercice.create!(name: "Meditiation", description: "exercices de meditati
 #Cas 3
 #mood1.exercices.create!(name: "Yoga", description: "postures de yoga")
 
-Achievement.create!(date: "10/05/2019", init_mood: mood1, final_mood: mood2, user: user1, exercice: exo1)
-Achievement.create!(date: "28/05/2019", init_mood: mood1, final_mood: mood2, user: user2, exercice: exo2)
+Achievement.create!(date: "10/05/2019", mood: mood1, rating: 4, user: user1, exercice: exo1)
+Achievement.create!(date: "28/05/2019", mood: mood1, rating: 3, user: user2, exercice: exo2)
 
 puts "Finished !"
 
