@@ -1,9 +1,9 @@
 class ExercisesController < ApplicationController
   def index
-    @exercises = exercise.all
+    @exercises = Exercise.all
   end
 
   def show
-    @exercise = exercise.find(params[:id])
+    @exercise = Exercise.find(params[:id])
   end
 end
