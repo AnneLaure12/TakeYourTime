@@ -1,3 +1,9 @@
-<h1>Achievement#index</h1>
+<h1>Achievements#index</h1>
 
-
+<% @achievements.each do | achievement | %>
+<ul>
+  <li> <%= achievemnt.init_mood %> </li>
+  <li> <%= achievemnt.exercice %> </li>
+  <li> <%= achievemnt.final_mood %> </li>
+</ul>
+<% end %>
