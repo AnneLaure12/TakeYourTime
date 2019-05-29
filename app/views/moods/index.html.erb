@@ -1,3 +1,10 @@
 <h1>Moods#index</h1>
 
+<% @moods.each do | mood | %>
+  <%= link_to exercices_path(@exercice) do %>
+    <ul>
+      <li> <%= mood.name %> </li>
+    </ul>
+  <% end %>
+<% end %>
 

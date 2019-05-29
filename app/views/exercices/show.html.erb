@@ -1,5 +1,8 @@
-<h1>Show#Exercices</h1>
+<h1>Show#Exercises</h1>
+  <%= link_to achievements_path do %>
+    <h3> <%= @exercice.name %> </h3>
+  <% end %>
 
-<% @exercices.each do |exercice| %>
-<%=exercice.name %>
+<%= simple_form_for(@user, as: :user, method: :post, url: exercice_achievements_path(:exercice_id)) do |f| %>
+  <%= f.submit 'Done', class: "btn- primary-button"%>
 <% end %>
