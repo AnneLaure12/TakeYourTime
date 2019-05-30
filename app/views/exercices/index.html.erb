@@ -7,3 +7,11 @@
     </ul>
   <% end %>
 <% end %>
+
+<%= form_tag exercices_path, method: :get do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Find an Exercise"
+  %>
+<% end %>
