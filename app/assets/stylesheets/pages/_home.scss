@@ -1,1 +1,58 @@
-// Specific CSS for your home-page
+.navbar-lewagon {
+  justify-content: space-between;
+  background: white;
+  font-family: 'Pacifico', cursive;
+  background-color: #F0E9E9;
+}
+
+.navbar-lewagon .navbar-collapse {
+  flex-grow: 0;
+}
+
+.navbar-lewagon .navbar-brand img {
+  width: 40px;
+}
+
+.home-container {
+  width : 100vw;
+  height: calc(100vh - 56px);
+  position: absolute;
+  bottom:0;
+  right: 0;
+  background-image: asset-url('homepage_picture.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  font-family: 'Pacifico', cursive;
+}
+
+.home-title {
+  font-family: 'Josefin Sans', sans-serif;
+  color: white;
+  font-weight: lighter;
+}
+
+.elements {
+  display: flex;
+  justify-content: space-around;
+}
+
+.card {
+  height: 425px;
+  width: 375px;
+  background-color: #F0E9E9;
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  margin-top: 225px;
+  margin-left: 125px;
+  border-radius: 5px;
+}
+
+.card-title {
+  font-size: 24px;
+}
+
+.btn {
+
+}
