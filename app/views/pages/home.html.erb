@@ -1,43 +1,16 @@
-<head>
-  <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
-</head>
-
-
-<body>
-
-  <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <%= link_to "", class: "navbar-brand" do %>
-    <%= image_tag "" %>
-    <%= TakeYourTime %>
-    <% end %>
 
 
 
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+
+
+
+
+
+  <!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
-  </button>
+  </button>-->
 
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <% if user_signed_in? %>
-        <li class="nav-item dropdown">
-          <%= image_tag "https://files.slack.com/files-pri/T02NE0241-FJT6B1QPK/al.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <%= link_to "Follow your path", "#", class: "dropdown-item" %>
-            <%= link_to "Who are we ?", "#", class: "dropdown-item" %>
-            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-          </div>
-        </li>
-      <% else %>
-        <li class="nav-item">
-          <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-        </li>
-      <% end %>
-    </ul>
-  </div>
-</div>
 
 <div class="home-container">
   <div class="left">
@@ -53,13 +26,5 @@
       </div>
     </div>
   </div>
-  <div class="right">
-    <div class="right-container">
-    </div>
-  </div>
-</div>
-
-
-</body>
 
 
