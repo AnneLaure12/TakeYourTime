@@ -1,6 +1,12 @@
 class ExercicesController < ApplicationController
   def index
-    @exercices = Exercice.all
+    search = params["search"]
+    if search.present?
+      name = search["name"]
+      @exercices = Exercice.ransack(name_or_description_cont: name).result
+    else
+      @exercices = Exercice.all
+    end
   end
 
   def show

@@ -19,6 +19,8 @@ user2 = User.create!(email: "al@wagon.com", password: "azerty", first_name: "AL"
 
 mood1 = Mood.create!(name: "stressed")
 mood2 = Mood.create!(name: "happy")
+mood3 = Mood.create!(name: "neutral")
+mood4 = Mood.create!(name: "angry")
 
 #Cas 1
 #exos1 = Exercice.new(name: "Yoga", description: "postures de yoga" )
@@ -32,6 +34,8 @@ mood2 = Mood.create!(name: "happy")
 exo0 = Exercice.create!(name: "Respiration", description: "exercices de respiration", mood: mood1)
 exo1 = Exercice.create!(name: "Yoga", description: "postures de yoga", mood: mood1)
 exo2 = Exercice.create!(name: "Meditiation", description: "exercices de meditation", mood: mood2)
+exo3 = Exercice.create!(name: "Static position", description: "don't move and breath", mood: mood3)
+exo4 = Exercice.create!(name: "Dynamic position", description: "chake your body!", mood: mood1)
 
 #Cas 3
 #mood1.exercices.create!(name: "Yoga", description: "postures de yoga")
