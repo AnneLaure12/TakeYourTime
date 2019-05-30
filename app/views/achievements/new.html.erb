@@ -1,6 +1,18 @@
+<div class="exercises-show-container">
+
 <h1> Achievement#new </h1>
 
 <%= simple_form_for [@exercice, @achievement] do |f| %>
-  <%= f.collection_radio_buttons :rating, [[5], [4], [3], [2], [1]], :first, :last, item_wrapper_tag: false, boolean_style: :inline  %>
-  <%= f.submit %>
+
+
+ <div class="slidecontainer">
+    <input type="range" min="0" max="5" value="3" class="slider" id="achievement_rating" name="achievement[rating]">
+</div>
+
+  <br>
+  <br>
+  <br>
+
+<%= f.submit %>
 <% end %>
+</div>

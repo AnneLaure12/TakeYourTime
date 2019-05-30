@@ -26,6 +26,6 @@ class AchievementsController < ApplicationController
   private
 
   def set_params
-    params.require(:achievement).permit(:user_id, :exercice_id, :mood_id, :rating)
+    params.require(:achievement).permit(:rating)
   end
 end
