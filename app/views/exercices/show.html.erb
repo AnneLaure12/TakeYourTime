@@ -4,3 +4,5 @@
 <%= @exercice.description %>
 
 <%= link_to 'shuffle!', exercice_path(select_another_exos(@exercices, @exercice, @mood)) %>
+
+<%= link_to 'DONE', new_exercice_achievement_path(@exercice) %>
