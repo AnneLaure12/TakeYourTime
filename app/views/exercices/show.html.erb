@@ -1,8 +1,10 @@
-<h1>Show#Exercises</h1>
+<div class="show-exercise-container">
+  <h1>Your Exercise Today</h1>
 
-<%= @exercice.name %>
-<%= @exercice.description %>
+  <%= @exercice.name %>
+  <%= @exercice.description %>
 
-<%= link_to 'shuffle!', exercice_path(select_another_exos(@exercices, @exercice, @mood)) %>
+  <%= link_to 'shuffle!', exercice_path(select_another_exos(@exercices, @exercice, @mood)) %>
 
-<%= link_to 'DONE', new_exercice_achievement_path(@exercice) %>
+  <%= link_to 'DONE', new_exercice_achievement_path(@exercice) %>
+</div>
