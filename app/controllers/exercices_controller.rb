@@ -11,7 +11,7 @@ class ExercicesController < ApplicationController
 
   def show
     @exercices = Exercice.all
-    @exercice = Exercice.find(params[:mood_id])
+    @exercice = Exercice.find(params[:id])
     @achievement = Achievement.new
     @mood = @exercice.mood
   end
