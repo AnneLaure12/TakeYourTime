@@ -8,10 +8,18 @@
   <% end %>
 <% end %>
 
-<%= form_tag exercices_path, method: :get do %>
-  <%= text_field_tag :query,
-    params[:query],
-    class: "form-control",
-    placeholder: "Find an Exercise"
-  %>
+
+
+
+<%= simple_form_for :search, method: "GET", html: { class: 'form-inline' } do |f| %>
+  <%= f.input :name, input_html: {value: ""} %>
+  <%= f.submit "Search", class: "btn btn-primary" %>
 <% end %>
+
+  <%#= form_tag exercice_path(exercice) , method: :get do %>
+    <%#= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "Find Exercise"
+    %>
+  <%# end %>
