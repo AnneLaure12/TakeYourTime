@@ -8,7 +8,7 @@
       <% @exercices.each do | exercice | %>
         <div class="col-lg-4">
           <%= link_to exercice_path(exercice) do %>
-            <div class="tyt-card", style= "background: url(<%= image_path("backimage_#{rand(6)}.png") %>)" >
+            <div class="tyt-card", style= "background: url(<%= image_path("backimage_#{rand(6)}.png") %>)">
               <div class="card-category">
                 <%= exercice.name %>
               </div>
