@@ -1,3 +1,5 @@
+<%= include_gon %>
+
 <h1>Achievements#index</h1>
 
 
@@ -8,9 +10,7 @@
 
 
 
-<div id="container" style="width: 600px; height: 500px; margin: 0 auto">
-
-</div>
+<div id="container" style="width: 600px; height: 500px; margin: 0 auto"></div>
   <% @achievements = current_user.achievements %>
     <% @achievements.each do | achievement | %>
       <ul>
