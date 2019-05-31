@@ -1,9 +1,12 @@
 
+
+
 <div class= "tyt-navbar d-flex justify-content-between align-items-center">
   <%= link_to root_path do %>
     <div class="d-flex">
       <%#= image_tag "mon-image", class: "" %>
-      <div>Take your time</div>
+      <div class="<%= 'white-color' if url_for == root_path %>">TakeYourTime
+      </div>
     </div>
   <% end %>
   <div class= "tyt-navbar-right">
@@ -25,3 +28,4 @@
     </ul>
   </div>
 </div>
+
