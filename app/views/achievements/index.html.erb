@@ -1,13 +1,32 @@
 <h1>Achievements#index</h1>
 
+
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/series-label.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+
+
+
+<div id="container" style="width: 600px; height: 500px; margin: 0 auto">
+
+</div>
   <% @achievements = current_user.achievements %>
     <% @achievements.each do | achievement | %>
       <ul>
         <li> <%= achievement.mood.name %> </li>
         <li> <%= achievement.exercice.name %> </li>
         <li> <%= achievement.rating %> </li>
+        <li> <%= achievement.date %> </li>
       </ul>
   <% end %>
+
+
+
+
+
+
+
 
 <%= link_to "HOME", root_path %>
 <%= link_to "Exercises", exercices_path(@exercice) %>
