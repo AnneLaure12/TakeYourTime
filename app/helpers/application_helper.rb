@@ -1,6 +1,10 @@
 module ApplicationHelper
-  def select_exos(exercices, mood)
-    exercices.select { |exercice| exercice.mood == mood }.sample
+  # def select_exos(exercices, mood)
+  #   exercices.select { |exercice| exercice.mood == mood }.sample
+  # end
+
+  def select_exos(mood)
+    mood.exercices.sample
   end
 
   def select_another_exos(exercices, rejected_exo, mood)
