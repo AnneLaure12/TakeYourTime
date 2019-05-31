@@ -2,7 +2,7 @@
 
 <ul>
 <% @moods.each do |mood| %>
-<%= link_to exercice_path(@exercices) do %>
+<%= link_to exercice_path(select_exos(@exercice, mood)) do %>
  <li><h1><%= mood.name %></li></h1>
 <% end %>
 <% end %>
