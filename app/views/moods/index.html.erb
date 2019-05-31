@@ -1,9 +1,11 @@
 <h1>Moods#index</h1>
 
 <ul>
-<% @moods.each do |mood| %>
-<%= link_to exercice_path(@exercices) do %>
- <li><h1><%= mood.name %></li></h1>
-<% end %>
-<% end %>
+  <% @moods.each do |mood| %>
+    <%= link_to exercice_path(select_exos(mood)) do %>
+    <li><h1><%= mood.name %></li></h1>
+    <% end %>
+  <% end %>
 </ul>
+
+
