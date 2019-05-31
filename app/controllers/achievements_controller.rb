@@ -7,6 +7,8 @@ class AchievementsController < ApplicationController
 
   def index
     @achievements = Achievement.all
+    gon.userAchivementsRatings = [2, 4, 5, 3]
+    gon.userAchivementsDates = ["24.05", "25.05", "26.05", "27.05"]
   end
 
   def create

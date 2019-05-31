@@ -1,4 +1,8 @@
 import "bootstrap";
+//
+console.log(gon.userAchivementsRatings);
+console.log(gon.userAchivementsDates);
+
 var Highcharts = require('highcharts');
 
 // Load module after Highcharts is loaded
@@ -16,8 +20,7 @@ Highcharts.chart('container', {
         title: {
           text: 'Month'
         },
-        categories: ['', '', '', '', '', '',
-            '', '', '', '', '', '']
+        categories: gon.userAchivementsDates
     },
     yAxis: {
         title: {
