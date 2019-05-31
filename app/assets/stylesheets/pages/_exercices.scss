@@ -1,17 +1,19 @@
 h1 {
   font-family: josefin;
+  color: gray;
+  opacity: .8;
   text-align: center;
   padding: 16px;
-  font-size: 48px;
+  font-size: 50px;
 }
-.container{
-  //background-color: red;
+body {
+  background-color: #F0E9E9;
 }
 .tyt-card {
   border-radius: 50%;
-  box-shadow: 2px 2px 1px 1px rgba(0, 0, 255, .2);
-  width: 85%;
-  height: 290px;
+  box-shadow: 2px 2px 1px 1px rgba(0, 0, 250, .1);
+  width: 67%;
+  height: 223px;
   margin: 8px;
 }
 .card-category {
