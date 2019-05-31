@@ -1,52 +1,34 @@
 
 <div class="show-exercise-container">
-
   <div class="exercise-show-title">
     <h1>Your Exercise Today</h1>
   </div>
 
-  <div class="exercise-show-card-content">
-    <%= @exercice.name %>
-    <%= @exercice.description %>
-  </div>
 
+  <div class="d-flex w-100 justify-content-center">
+    <div class="exercise-show-card-content">
+      <h2><%= @exercice.name %></h2>
+      <p><%= @exercice.description %></p>
+    </div>
+  </div>
 
 
   <div class="exercise-show-card-footer footer">
 
     <div class="exercice-show-shuffle">
-      <%= link_to 'shuffle!', exercice_path(select_another_exos(@exercices, @exercice, @mood)) %>
+      <%= link_to 'shuffle!', exercice_path(select_another_exos(@exercices, @exercice, @mood)), class: "btn btn-secondary" %>
     </div>
 
     <div class="exercises-show-full-sliderbar">
       <%= simple_form_for [@exercice, @achievement] do |f| %>
       <div class="slidecontainer">
-        <input type="range" min="0" max="5" value="3" class="slider" id="achievement_rating" name="achievement[rating]">
+        <input type="range" min="0" max="5" value="0" class="slider" id="achievement_rating" name="achievement[rating]">
       </div>
     </div>
 
     <div class="achievement-creation">
-      <%= f.submit %>
+      <%= f.button :submit, "Done!", class: "btn btn-secondary" %>
     </div>
-
-
-
-
     <% end %>
-
   </div>
 </div>
-
-
-<style>
-  .footer {
-    position: fixed;
-    height: 100px;
-    bottom: 0;
-    width: 100%;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-  }
-</style>

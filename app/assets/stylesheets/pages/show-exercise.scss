@@ -3,6 +3,16 @@ h1 {
   text-align: center;
 }
 
+h2 {
+  font-size: 50px;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+p {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 30px;
+}
+
 .show-exercise-container {
   width: 100vw;
   height: 100vh;
@@ -13,9 +23,13 @@ h1 {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  flex-direction: column;
   background-color: #C16E70;
-  height: 550px;
+  height: 500px;
   width: 500px;
+  border-radius: 5px;
+  opacity: 1;
+  box-shadow: 1px 1px #ACA1AB;
 
 }
 
@@ -37,24 +51,57 @@ h1 {
   -webkit-appearance: none;  /* Override default CSS styles */
   appearance: none;
   width: 500px; /* Full-width */
-  height: 12px; /* Specified height */
+  height: 20px; /* Specified height */
   background: blue; /* Grey background */
   outline: none; /* Remove outline */
   opacity: 1; /* Set transparency (for mouse-over effects on hover) */
   -webkit-transition: .2s; /* 0.2 seconds transition on hover */
   transition: opacity .2s;
   border-radius: 10px;
-  background-image: url('/assets/homepage_picture.jpg');
+  background-image: url(image_path('homepage_picture.jpg'));
+  /*background-image: url('/assets/homepage_picture.jpg');*/
   background-size: cover;
   filter: brightness(120%);
 }
 .slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 50px;
-  height: 40px;
+  width: 60px;
+  height: 48px;
   border: 0;
-  background-image: url('/assets/breathe.png');
+  background-image: url(image_path('breathe.png'));
   background-size: cover;
   cursor: pointer;
+}
+
+  .footer {
+    position: fixed;
+    height: 100px;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .btn-secondary {
+  margin-bottom: 40px;
+  color: #8D7B8B;
+  background-color: #F0E9E9;
+  border-color: #8D7B8B;
+  border: 1px solid;
+  border-radius: 30px;
+  padding: 10px;
+  width: 165px;
+  height: 55px;
+  font-size: 22px;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.btn-secondary:hover {
+  color: #6E697D;
+  background-color: #F0E9E9;
+  border-color: #6E697D;
+  box-shadow: 0.2px 0.2px;
 }
