@@ -1,11 +1,22 @@
-<h1>Moods#index</h1>
 
-<ul>
-  <% @moods.each do |mood| %>
-    <%= link_to exercice_path(select_exos(mood)) do %>
-    <li><h1><%= mood.name %></li></h1>
-    <% end %>
-  <% end %>
-</ul>
+<h1>Moods</h1>
+
+
+<div class="container">
+    <div class="row">
+      <% @moods.each do | mood | %>
+        <div class="col-lg-4">
+          <%= link_to exercices_path do %>
+        <div class="tyt-card", style= "background: url(<%= image_path("backimage_#{rand(6)}.png") %>)">
+              <div class="card-category">
+                <%= mood.name %>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
 
 
