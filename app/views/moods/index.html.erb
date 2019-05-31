@@ -6,7 +6,7 @@
     <div class="row">
       <% @moods.each do | mood | %>
         <div class="col-lg-4">
-          <%= link_to exercices_path do %>
+          <%= link_to exercice_path(select_exos(mood)) do %>
         <div class="tyt-card", style= "background: url(<%= image_path("backimage_#{rand(6)}.png") %>)">
               <div class="card-category">
                 <%= mood.name %>
