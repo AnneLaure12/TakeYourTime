@@ -27,7 +27,7 @@ body {
   padding-top: 80px;
 }
 
-.btn-search {
+.search {
   position: absolute;
   bottom: 25px;
   right: 25px;
@@ -43,21 +43,15 @@ body {
   font-family: 'Josefin Sans', sans-serif;
 }
 
-.btn-search:hover {
+.search:hover {
   color: #6E697D;
   background-color: #F0E9E9;
   border-color: #6E697D;
   box-shadow: 0.2px 0.2px;
 }
 
-.form-group {
-  color: gray;
-  opacity: .9;
+.exo-form{
+  color:: gray;
   font-family: "pacifico";
-  font-size: 24px;
   font-weight: lighter;
-  position: absolute;
-  bottom: 35px;
-  right: 220px;
 }
-

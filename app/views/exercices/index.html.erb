@@ -19,9 +19,10 @@
     </div>
   </div>
 
-
+  <div class="exo-form">
     <%= simple_form_for :search, method: "GET", html: { class: 'form-inline' } do |f| %>
       <%= f.input :name, input_html: {value: ""} %>
-      <%= f.submit "Search", class: "btn-search" %>
+      <%= f.submit "Search", class: "search" %>
     <% end %>
+  </div>
 </div>
