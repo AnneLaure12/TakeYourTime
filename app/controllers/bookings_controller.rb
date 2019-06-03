@@ -1,23 +1,24 @@
 class BookingsController < ApplicationController
-
   def index
+
     @bookings = Booking.where(user: current_user)
   end
 
   def new
-    @classe = Classe.find(params[:classe_id])
+    @teacher = Teacher.find(params[:class_id])
     @booking = Booking.new
   end
 
   def create
-    @classes = Classe.all
-    @classe = Classe.find(params[:classe_id])
+    @teacher = Teacher.find(params[:class_id])
     @booking = Booking.new(set_booking_params)
-    @booking.classe = @classe
+    @booking.teacher = @teacher
     @booking.user = current_user
+      raise
     if @booking.save
-      redirect_to @classes_path
-    else render 'classes/index'
+      redirect_to teachers_path
+    else render :new
+    end
   end
 
   def edit
@@ -32,6 +33,6 @@ class BookingsController < ApplicationController
   private
 
   def set_booking_params
-    params.require(:booking).permit(:title)
+    params.require(:booking).permit(:title, :teacher_id)
   end
 end
