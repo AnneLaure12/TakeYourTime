@@ -5,16 +5,15 @@ class BookingsController < ApplicationController
   end
 
   def new
-    @teacher = Teacher.find(params[:class_id])
+    @teacher = Teacher.find(params[:teacher_id])
     @booking = Booking.new
   end
 
   def create
-    @teacher = Teacher.find(params[:class_id])
+    @teacher = Teacher.find(params[:teacher_id])
     @booking = Booking.new(set_booking_params)
     @booking.teacher = @teacher
     @booking.user = current_user
-      raise
     if @booking.save
       redirect_to teachers_path
     else render :new
