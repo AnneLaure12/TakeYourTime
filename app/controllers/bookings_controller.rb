@@ -12,7 +12,7 @@ class BookingsController < ApplicationController
     @teacher = Teacher.find(params[:teacher_id])
     @booking = Booking.new(set_booking_params)
     @booking.teacher = @teacher
-    # @booking.date = Time.now
+    @booking.date = Time.now
     @booking.user = current_user
     if @booking.save
       redirect_to bookings_path
@@ -39,6 +39,6 @@ class BookingsController < ApplicationController
   private
 
   def set_booking_params
-    params.require(:booking).permit(:title, :teacher_id)
+    params.require(:booking).permit(:title, :teacher_id, :date)
   end
 end

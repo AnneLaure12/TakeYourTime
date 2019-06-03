@@ -2,8 +2,9 @@
 
 <ul>
   <% @bookings.each do |booking| %>
+    <li> <%= "Your teacher is #{booking.teacher.name}" %> </li>
     <li> <%= booking.title %> </li>
-    <li> <%= "Start on #{booking.teacher.start_at}"%> </li>
+    <li> <%= "Start on #{booking.date.strftime("%A %e %B")}"%> </li>
     <li> <%= "for #{booking.user.first_name}" %> </li>
     <%= link_to 'edit', edit_booking_path(booking), class: 'btn bouton' %>
     <%= link_to 'delete', booking_path(booking),
@@ -12,3 +13,4 @@
           class: 'btn bouton' %>
   <% end %>
 </ul>
+<p> <%= link_to "See your path...", achievements_path %> </p>
