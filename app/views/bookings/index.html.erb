@@ -3,7 +3,12 @@
 <ul>
   <% @bookings.each do |booking| %>
     <li> <%= booking.title %> </li>
-    <li> <%= booking.teacher.start_at %> </li>
-    <li> <%= booking.user.first_name%> </li>
+    <li> <%= "Start on #{booking.teacher.start_at}"%> </li>
+    <li> <%= "for #{booking.user.first_name}" %> </li>
+    <%= link_to 'edit', edit_booking_path(booking), class: 'btn bouton' %>
+    <%= link_to 'delete', booking_path(booking),
+          method: :delete,
+          data: { confirm: "Are you sure?" },
+          class: 'btn bouton' %>
   <% end %>
 </ul>
