@@ -1,0 +1,15 @@
+<h1>My Teachers</h1>
+
+<ul>
+  <% @classes.each do |classe| %>
+    <li> <%= classe.name %> </li>
+    <li> <%= classe.address %> </li>
+    <li> <%= classe.description %> </li>
+    <li> <%= classe.start_at %> </li>
+  <% end %>
+</ul>
+<%#= link_to new_classe_booking_path(@classes) %>
+
+<h1>My Bookings</h1>
+
+<!--Map here -->
