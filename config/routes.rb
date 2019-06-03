@@ -3,6 +3,11 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   resources :moods, only: [:index]
+  resources :classes, only: [:index] do
+    resources :bookings, only: [:new, :create]
+  end
+
+  resources :bookings, only: [:index, :edit, :update, :destroy]
 
   resources :exercices, only: [:index, :show] do
     resources :achievements, only: [:create, :new]
