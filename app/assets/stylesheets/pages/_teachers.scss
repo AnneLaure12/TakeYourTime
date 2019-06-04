@@ -15,17 +15,19 @@
   width: 85%;
 }
 .teacher-index-btn{
+  display: flex;
+  align-items: center;
   color: #8D7B8B;
   background-color: #F0E9E9;
   border-color: #8D7B8B;
   border: 1px solid;
   border-radius: 30px;
   padding: 8px;
-  width: 160px;
-  height: 56px;
+  width: 120px;
+  height: 48px;
   font-size: 14px;
+  margin: 8px;
   font-family: 'Josefin Sans', sans-serif;
-  margin-left: 186px;
 }
 .teacher-index-btn:hover {
   color: black;
@@ -34,10 +36,37 @@
   box-shadow: 0.2px 0.2px;
   text-decoration: none;
 }
-.border{
+/*.border{ // card-product
   box-shadow: .5px .5px 1px #8D7B8B;
   border-radius: 8px;
   padding-bottom: 8px;
   padding-left: 4px;
   margin-bottom: 2px;
+}*/
+.border{
+  border-radius: 1px;
+  margin-bottom: 3px;
+  height: 120px;
+  background: white;
+  // box-shadow: .5px .5px 1px #8D7B8B;
+  box-shadow: .5px .5px 2px rgba(0,0,0,0.2);
+  display : flex;
+  font-family: 'Nanum Myeongjo', serif;
+}img{
+  height: 100%;
+  width: 120px;
+  object-fit: cover;
+}
+.border p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  padding: 16px;
+  // margin-top: 8px;
+}
+.card-product h5 {
+  padding: 16px;
+  font-size: 16px;
+  font-weight: bold;
+  // margin: 0;
 }
