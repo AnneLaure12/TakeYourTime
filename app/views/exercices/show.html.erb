@@ -21,8 +21,8 @@
 
       <div class="exercise-show-shuffle">
         <% unless @remove_btn %>
-            <%= link_to 'shuffle!', exercice_path(select_another_exos(@exercices,
-            @exercice, @mood), remove_btn: true), class: "btn btn-secondary" %>
+            <%= link_to 'Shuffle!', exercice_path(select_another_exos(@exercices,
+            @exercice, @mood), remove_btn: true), class: "btn show-exercise-btn shuffle" %>
           <% else %>
             <div id="blank-shuffle"></div>
           <% end %>
@@ -46,7 +46,7 @@
       </div>
 
       <div class="achievement-creation">
-        <%= f.button :submit, "Done!", class: "btn btn-secondary" %>
+        <%= f.button :submit, "Done!", class: "btn show-exercise-btn done" %>
       </div>
       <% end %>
 
