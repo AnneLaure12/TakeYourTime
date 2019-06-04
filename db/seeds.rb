@@ -63,7 +63,7 @@ puts "Creating exercices..."
 
 exos_data = [ { name: "Respiration", description: "exercices de respiration", mood: mood1 },
               { name: "Yoga", description: "postures de yoga", mood: mood1 },
-              { name: "Meditiation", description: "exercices de meditation", mood: mood2 },
+              { name: "Meditation", description: "exercices de meditation", mood: mood2 },
               { name: "Static position", description: "don't move and breath", mood: mood2 },
               { name: "Dynamic position", description: "chake your body!", mood: mood3 },
               { name: "Writing Exercise", description: "Write down three things you're grateful for", mood: mood3 }

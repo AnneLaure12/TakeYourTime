@@ -28,6 +28,7 @@ h2 {
   font-weight: 400;
   padding-left: 20px;
   padding-right: 20px;
+  color: #508CA9;
 }
 
 .image-box{
@@ -51,6 +52,7 @@ h2 {
 }
 
 .exercise-show-card-exercise {
+  background-color: #F7F3ED;
   display: flex;
   flex-direction: column;
   padding-top: 16px;
@@ -59,7 +61,7 @@ h2 {
   // border-color: #6E697D;
   height: 460px;
   width: 600px;
-  border-radius: 8px;
+  border-radius: 5px;
   opacity: 0.9;
   // box-shadow: 1px 1px #6E697D;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
@@ -70,7 +72,7 @@ h2 {
 
 .exercice-description {
   padding-top: 40px;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Nanum Myeongjo', serif;
   font-size: 30px;
 }
 
@@ -81,8 +83,9 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: rgba(230, 230, 250, 0.6);
-  border-radius: 8px;
+  background-color: #F7F3ED;
+  // background-color: rgba(230, 230, 250, 0.6);
+  border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   font-family: 'Nanum Myeongjo', serif;
   h2 {
@@ -106,7 +109,7 @@ h2 {
 .slider {
   -webkit-appearance: none;  /* Override default CSS styles */
   appearance: none;
-  width: 450px; /* Full-width */
+  width: 400px; /* Full-width */
   height: 20px; /* Specified height */
   background: blue; /* Grey background */
   outline: none; /* Remove outline */

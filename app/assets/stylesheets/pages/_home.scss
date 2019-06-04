@@ -7,7 +7,7 @@
   font-size: 24px;
   a {
      text-decoration: none;
-     color: #8D7B8B;
+     color: #508CA9;
   }
 }
 
@@ -54,7 +54,7 @@
   justify-content: between;
   height: 425px;
   width: 375px;
-  background-color: #F0E9E9;
+  background-color: #F7F3ED;
   display: flex;
   justify-content: space-around;
   padding: 20px;
@@ -68,18 +68,19 @@
 
 
 .card-title {
-  font-size: 25px;
-  font-family: 'Josefin Sans', sans-serif;
+  font-size: 26px;
+  font-family: 'Nanum Myeongjo', serif;
   color: black;
   padding-top: 45px;
-  text-align: justify;
+  text-align: left;
 }
 
 .card-paragraphe {
+  font-size: 15px;
   padding-top: 60px;
-  font-family: 'Pacifico', cursive;
+  font-family: 'Nanum Myeongjo', serif;
+  // font-family: 'Pacifico', cursive;
   font-weight: lighter;
-  color: #8D7B8B;
+  color: black;
   opacity: 0.9;
 }
-

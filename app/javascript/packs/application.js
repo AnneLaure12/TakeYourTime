@@ -1,5 +1,21 @@
 import "bootstrap";
+import { initSweetalert } from '../plugins/init_sweetalert';
+
+initSweetalert('#sweet-alert-demo', {
+  title: "Congratulations !",
+  text: "Your daily exercise is done !",
+  confirmButtonColor: '#DD6B55',
+  confirmButtonText: 'Yes',
+  icon: "success"
+}, (value) => {
+  if (value) {
+    const link = document.querySelector('#submit-button');
+    link.click();
+  }
+});
 //
+
+
 console.log(gon.userAchivementsRatings);
 console.log(gon.userAchivementsDates);
 

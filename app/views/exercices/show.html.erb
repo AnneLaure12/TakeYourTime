@@ -35,7 +35,7 @@
     <div class="exercise-show-review">
 
       <h2>How was your exercise ?</h2>
-      <p><i> move the cursor according to your new mood !</i></p>
+      <p>Move the cursor according to your new mood !</p>
 
 
       <div class="exercises-show-full-sliderbar">
@@ -45,10 +45,17 @@
         </div>
       </div>
 
-      <div class="achievement-creation">
-        <%= f.button :submit, "Done!", class: "btn show-exercise-btn done" %>
-      </div>
+
+
+
+
+        <%= f.button :submit, "Done!", class: "d-none", id: "submit-button" %>
+
+<!-- achievement-creation -->
+
       <% end %>
+
+      <button id="sweet-alert-demo" class="btn show-exercise-btn done">Done!</button>
 
     </div>
 
