@@ -11,6 +11,7 @@ Achievement.destroy_all
 User.destroy_all
 Exercice.destroy_all
 Mood.destroy_all
+Teacher.destroy_all
 puts "Finish destroy"
 
 puts "Start seed"
@@ -77,12 +78,18 @@ exo1, exo2, exo3, exo4, exo5 = Exercice.all
 
 puts "Creating achievements..."
 
-Achievement.create!(date: "10/05/2019", mood: mood1, rating: 0, user: user1, exercice: exo1)
-Achievement.create!(date: "28/05/2019", mood: mood2, rating: 0, user: user2, exercice: exo2)
+Achievement.create!(date: "10/05/2019", mood: mood1, rating: 3, user: user1, exercice: exo1)
+Achievement.create!(date: "28/05/2019", mood: mood2, rating: 4, user: user2, exercice: exo2)
 
 
-achievements_data = [ { date: "10/05/2019", mood: mood1, rating: 0, user: user1, exercice: exo1 },
-                      { date: "28/05/2019", mood: mood2, rating: 0, user: user2, exercice: exo2 },
+achievements_data = [ { date: "10/05/2019", mood: mood1, rating: 3, user: user1, exercice: exo1 },
+                      { date: "28/05/2019", mood: mood2, rating: 4, user: user2, exercice: exo2 },
                     ]
+
+puts "Creating classs..."
+
+Teacher.create!(name: "Denis", address: "59 Cours Saint-Louis, 33300 Bordeaux", description: "nice yoga and meditation courses")
+Teacher.create!(name: "Alice", address: "26 Cours de la Martinique, 33000 Bordeaux", description: "Dynamic yoga courses")
+
 puts "Finished !"
 
