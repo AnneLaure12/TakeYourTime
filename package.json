@@ -8,8 +8,7 @@
     "highcharts": "^7.1.1",
     "jquery": "^3.4.1",
     "mapbox-gl": "^1.0.0",
-    "popper.js": "^1.15.0",
-    "wow.js": "^1.2.2"
+    "popper.js": "^1.15.0"
   },
   "devDependencies": {
     "webpack-dev-server": "^3.4.1"
