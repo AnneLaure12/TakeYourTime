@@ -1,4 +1,8 @@
 import "bootstrap";
+import 'mapbox-gl/dist/mapbox-gl.css';
+import { initMapbox } from '../plugins/init_mapbox';
+
+initMapbox();
 //
 console.log(gon.userAchivementsRatings);
 console.log(gon.userAchivementsDates);
