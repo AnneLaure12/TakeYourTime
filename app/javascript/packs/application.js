@@ -1,4 +1,20 @@
 import "bootstrap";
+import { initSweetalert } from '../plugins/init_sweetalert';
+
+initSweetalert('#sweet-alert-demo', {
+  title: "Congratulations !",
+  text: "Your daily exercise is done !",
+  confirmButtonColor: '#DD6B55',
+  confirmButtonText: 'Yes',
+  icon: "success"
+}, (value) => {
+  if (value) {
+    const link = document.querySelector('#submit-button');
+    link.click();
+  }
+});
+//
+
 
 import 'mapbox-gl/dist/mapbox-gl.css';
 import { initMapbox } from '../plugins/init_mapbox';
@@ -16,8 +32,6 @@ exercises.forEach((exercise) =>  {
   const rand = animate[Math.floor(Math.random() * animate.length)];
   exercise.classList.add(rand);
 });
-
-
 
 console.log(gon.userAchivementsRatings);
 console.log(gon.userAchivementsDates);

@@ -1,34 +1,64 @@
+<div class="exercise-show-background">
 
-<div class="show-exercise-container">
   <div class="exercise-show-title">
-    <h1>Your Exercise Today</h1>
+    <h1>Your Daily Moment</h1>
   </div>
 
-
-  <div class="d-flex w-100 justify-content-center">
-    <div class="exercise-show-card-content">
-      <h2><%= @exercice.name %></h2>
-      <p class="exercice-description"><%= @exercice.description %></p>
-    </div>
-  </div>
+  <div class="exercise-show-global-content">
 
 
-  <div class="exercise-show-card-footer footer">
+    <div class="exercise-show-card-container">
 
-    <div class="exercice-show-shuffle">
-      <%= link_to 'shuffle!', exercice_path(select_another_exos(@exercices, @exercice, @mood)), class: "btn btn-secondary" %>
-    </div>
+      <div class="exercise-show-card-exercise">
+        <h2><%= @exercice.name %></h2>
+        <div class="image-box">
+        <iframe width="600" height="385" src="https://www.youtube.com/embed/CA5wTlsn6ek" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<!--         <img class="image-exercise" src=<%= image_path("exercise.jpg") %>>
+        </img> -->
+        </div>
+        <!-- <p class="exercice-description"><%= @exercice.description %></p> -->
+        </div>
 
-    <div class="exercises-show-full-sliderbar">
-      <%= simple_form_for [@exercice, @achievement] do |f| %>
-      <div class="slidecontainer">
-        <input type="range" min="0" max="5" value="0" class="slider" id="achievement_rating" name="achievement[rating]">
+      <div class="exercise-show-shuffle">
+        <% unless @remove_btn %>
+            <%= link_to 'Shuffle!', exercice_path(select_another_exos(@exercices,
+            @exercice, @mood), remove_btn: true), class: "btn show-exercise-btn shuffle" %>
+          <% else %>
+            <div id="blank-shuffle"></div>
+          <% end %>
       </div>
+
     </div>
 
-    <div class="achievement-creation">
-      <%= f.button :submit, "Done!", class: "btn btn-secondary" %>
+
+
+    <div class="exercise-show-review">
+
+      <h2>How was your exercise ?</h2>
+      <p>Move the cursor according to your new mood !</p>
+
+
+      <div class="exercises-show-full-sliderbar">
+        <%= simple_form_for [@exercice, @achievement] do |f| %>
+        <div class="slidecontainer">
+          <input type="range" min="0" max="5" value="0" class="slider" id="achievement_rating" name="achievement[rating]">
+        </div>
+      </div>
+
+
+
+
+
+        <%= f.button :submit, "Done!", class: "d-none", id: "submit-button" %>
+
+<!-- achievement-creation -->
+
+      <% end %>
+
+      <button id="sweet-alert-demo" class="btn show-exercise-btn done">Done!</button>
+
     </div>
-    <% end %>
+
+
   </div>
 </div>
