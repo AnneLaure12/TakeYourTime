@@ -90,6 +90,7 @@ puts "Creating classs..."
 
 Teacher.create!(name: "Denis", address: "59 Cours Saint-Louis, 33300 Bordeaux", description: "nice yoga and meditation courses", latitude: nil, longitude: nil)
 Teacher.create!(name: "Alice", address: "26 Cours de la Martinique, 33000 Bordeaux", description: "Dynamic yoga courses", latitude: nil, longitude: nil)
+Teacher.create!(name: "Anne-Laure", address: "107 Cours Balguerie Stuttenberg, 33300 Bordeaux", description: "Best yoga teacher in Bordeaux", latitude: nil, longitude: nil)
 
 puts "Finished !"
 
