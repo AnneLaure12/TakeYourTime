@@ -9,12 +9,11 @@ h1 {
 body {
   background-color: #F0E9E9;
 }
-
 .tyt-card {
   border-radius: 50%;
   box-shadow: 2px 2px 1px 1px rgba(0, 0, 240, .1);
-  width: 67%;
-  height: 223px;
+  width: 50%;
+  height: 50%;
   margin: 8px;
 }
 .card-category {
@@ -26,7 +25,6 @@ body {
   text-align: center;
   padding-top: 80px;
 }
-
 .search {
   position: absolute;
   bottom: 25px;
@@ -42,14 +40,12 @@ body {
   font-size: 22px;
   font-family: 'Josefin Sans', sans-serif;
 }
-
 .search:hover {
   color: #6E697D;
   background-color: #F0E9E9;
   border-color: #6E697D;
   box-shadow: 0.2px 0.2px;
 }
-
 .exo-form{
   color:: gray;
   font-family: "pacifico";
