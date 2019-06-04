@@ -5,10 +5,9 @@
 
 .dashboard-container {
   background-color: white;
-  display: flex;
-  justify-content: space-around;
   position: relative;
 }
+
 .dashboard-wrapper-right {
 display: flex;
 align-items: center;
@@ -17,17 +16,16 @@ align-items: center;
 .dash-wrapper-left {
 overflow-y: scroll;
 height: 550px;
-width: 450px;
+width: 90%;
 border-radius: 3px;
-border: #F6F6F6F solid 1px;
-margin-top: 30px;
+border: #F7F3ED solid 1px;
 }
 
 .card-product {
   border-radius: 1px;
   margin-bottom: 3px;
   height: 120px;
-  width: 450px;
+
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display : flex;
@@ -86,7 +84,9 @@ a.hover {
 
 .scroll-title {
   font-family: 'Pacifico', cursive;
-  text-align: center;
+  text-align: left;
+  margin-left: 57px;
+  margin-top: 30px;
 }
 
 

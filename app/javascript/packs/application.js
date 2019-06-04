@@ -12,7 +12,7 @@ require('highcharts/modules/exporting')(Highcharts);
 Highcharts.chart('container', {
     chart: {
         type: 'spline',
-        backgroundColor: '#F6F6F6',
+        backgroundColor: '#F7F3ED',
         borderRadius: 5,
         style: {
             fontFamily: 'serif'
