@@ -1,20 +1,30 @@
 <h1>My Teachers</h1>
-<ul>
-  <% @teachers.each do |teacher| %>
-    <li> <%= teacher.name %> </li>
-    <li> <%= teacher.address %> </li>
-    <li> <%= teacher.description %> </li>
-    <%= link_to "Book a Teacher", new_teacher_booking_path(teacher) %>
-  <% end %>
-</ul>
 
+<div class="teacher-box">
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="wraper-right"><!--Map here -->
+        <div
+          id="map"
+          style="height: 500px;"
+          data-markers="<%= @markers.to_json %>"
+          data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+        ></div>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="wraper-left">
+        <ul>
+          <% @teachers.each do |teacher| %>
+            <li> <%= teacher.name %> </li>
+            <li> <%= teacher.address %> </li>
+            <li> <%= teacher.description %> </li>
+            <%= link_to "Book a class", new_teacher_booking_path(teacher) %>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
 
-<!--Map here -->
-
-<div
-  id="map"
-  style="width: 100%;
-  height: 600px;"
-  data-markers="<%= @markers.to_json %>"
-  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
-></div>
+<!--style="width: 50%;-->
