@@ -2,29 +2,35 @@
 
 <h1>Achievements#index</h1>
 
-
+<div class= "dashboard-container">
 <script src="https://code.highcharts.com/highcharts.js"></script>
 <script src="https://code.highcharts.com/modules/series-label.js"></script>
 <script src="https://code.highcharts.com/modules/exporting.js"></script>
 <script src="https://code.highcharts.com/modules/export-data.js"></script>
 
 
-
-<div id="container" style="width: 600px; height: 500px; margin: 0 auto"></div>
-  <% @achievements = current_user.achievements %>
-    <% @achievements.each do | achievement | %>
-      <ul>
+<div class= "dashboard-wrapper-left">
+  <% @achievements.each do | achievement | %>
+    <div class="card-product">
+      <img src="">
+      <div class="card-product-infos">
+       <ul>
+        <li> <%= achievement.date %> </li>
         <li> <%= achievement.mood.name %> </li>
         <li> <%= achievement.exercice.name %> </li>
         <li> <%= achievement.rating %> </li>
-        <li> <%= achievement.date %> </li>
-      </ul>
-  <% end %>
+        </ul>
 
+      </div>
+    </div>
+    <% end %>
+  </div>
 
+  <div class= "dashboard-wrapper-right">
+    <div id="container" style="width: 600px; height: 500px; margin: 0 auto"></div>
+  </div>
 
-
-
+</div>
 
 
 
