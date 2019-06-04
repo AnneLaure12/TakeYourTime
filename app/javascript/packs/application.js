@@ -1,5 +1,24 @@
 import "bootstrap";
+
+import 'mapbox-gl/dist/mapbox-gl.css';
+import { initMapbox } from '../plugins/init_mapbox';
+
+initMapbox();
 //
+
+// selectionner tous les exercices => mettre ds une const forEach
+// créer une const = tableau de string dans class name(en choisir 6)
+// => forEach  add class pour ch element exercice
+// la string aura pour valeur une des class choisi parmis les 6
+const exercises = document.querySelectorAll(".tyt-card");
+exercises.forEach((exercise) =>  {
+  const animate = ["bounce", "pulse", "wobble", "rubberBand", "rollIn", "rotateIn"];
+  const rand = animate[Math.floor(Math.random() * animate.length)];
+  exercise.classList.add(rand);
+});
+
+
+
 console.log(gon.userAchivementsRatings);
 console.log(gon.userAchivementsDates);
 
