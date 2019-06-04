@@ -1,6 +1,4 @@
 
-
-
 <div class= "tyt-navbar d-flex justify-content-between align-items-center">
   <%= link_to root_path do %>
     <div class="d-flex">
@@ -15,8 +13,8 @@
         <li class="nav-item dropdown">
           <%= image_tag "https://files.slack.com/files-pri/T02NE0241-FJT6B1QPK/al.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <%= link_to "Follow your path", "#", class: "dropdown-item" %>
-            <%= link_to "Find a teacher", "#", class: "dropdown-item" %>
+            <%= link_to "Follow your path", achievements_path, class: "dropdown-item" %>
+            <%= link_to "Find a class","#", class: "dropdown-item" %>
             <%= link_to "Who are we ?", "#", class: "dropdown-item" %>
             <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
           </div>

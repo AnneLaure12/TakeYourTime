@@ -1,38 +1,41 @@
 <%= include_gon %>
 
-<h1>Achievements#index</h1>
+<div class= "first-dash-container">
+<h1>Achievements</h1>
+
 
 <div class= "dashboard-container">
-<script src="https://code.highcharts.com/highcharts.js"></script>
-<script src="https://code.highcharts.com/modules/series-label.js"></script>
-<script src="https://code.highcharts.com/modules/exporting.js"></script>
-<script src="https://code.highcharts.com/modules/export-data.js"></script>
-
-
-<div class= "dashboard-wrapper-left">
+<div class= "scroll-and-cards">
+ <p class= "scroll-title"> Your daily exercises </p>
+<div class= "dash-wrapper-left">
   <% @achievements.each do | achievement | %>
     <div class="card-product">
-      <img src="">
+      <img src="https://i.pinimg.com/564x/8a/e0/b8/8ae0b80c16498671ec54914f284470c5.jpg">
       <div class="card-product-infos">
-       <ul>
-        <li> <%= achievement.date %> </li>
-        <li> <%= achievement.mood.name %> </li>
-        <li> <%= achievement.exercice.name %> </li>
-        <li> <%= achievement.rating %> </li>
-        </ul>
+       <span class= "dashboard-list">
+        <p class= "dashboard-date"><%= achievement.date.strftime("%e/%m/%Y") %> </p>
+        <p class= "dashboard-phrase"><%= "Today you were #{achievement.mood.name}. During the time you took for yourself, you did a #{achievement.exercice.name} exercise. You now feel on a #{achievement.rating} level. Keep going that way to improve your mood !" %></p>
+        </span>
 
       </div>
     </div>
     <% end %>
   </div>
+</div>
 
   <div class= "dashboard-wrapper-right">
-    <div id="container" style="width: 600px; height: 500px; margin: 0 auto"></div>
+    <div id="container" style="width: 750px; height: 550px; margin: 0 auto"></div>
   </div>
 
 </div>
 
 
+  <div class= "exercises-link">
+    <%= link_to "Take more time", exercices_path(@exercice) %>
+  </div>
+</div>
 
-<%= link_to "HOME", root_path %>
-<%= link_to "Exercises", exercices_path(@exercice) %>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/series-label.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>

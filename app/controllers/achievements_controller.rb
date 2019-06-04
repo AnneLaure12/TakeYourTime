@@ -11,7 +11,7 @@ class AchievementsController < ApplicationController
     gon.userAchivementsDates = []
     @achievements.each do |achievement|
       gon.userAchivementsRatings << achievement.rating
-      gon.userAchivementsDates << achievement.date
+      gon.userAchivementsDates << achievement.date.strftime("%e/%m/%Y")
     end
   end
 
