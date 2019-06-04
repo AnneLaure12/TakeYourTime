@@ -1,0 +1,92 @@
+.first-dash-container {
+  background-color: white;
+  height: 100vh;
+}
+
+.dashboard-container {
+  background-color: white;
+  position: relative;
+}
+
+.dashboard-wrapper-right {
+display: flex;
+align-items: center;
+}
+
+.dash-wrapper-left {
+overflow-y: scroll;
+height: 550px;
+width: 90%;
+border-radius: 3px;
+border: #F7F3ED solid 1px;
+}
+
+.card-product {
+  border-radius: 1px;
+  margin-bottom: 3px;
+  height: 120px;
+
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display : flex;
+  font-family: 'Nanum Myeongjo', serif;
+}
+
+.dashboard-date {
+  font-family: 'Nanum Myeongjo', serif;
+}
+
+.dashboard-phrase {
+  font-family: 'Nanum Myeongjo', serif;
+}
+
+.card-product img {
+  height: 100%;
+  width: 120px;
+  object-fit: cover;
+}
+
+.card-product h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-product p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.card-product .card-product-infos {
+  padding: 16px;
+}
+
+.exercises-link {
+  font-family: 'Nanum Myeongj', serif;
+  position: absolute;
+  bottom: 20px;
+  right: 80px;
+  font-size: 16px;
+  padding: 16px;
+a {
+   text-decoration: none;
+   color: black;
+}
+
+a.hover {
+
+}
+
+}
+
+.scroll-title {
+  font-family: 'Pacifico', cursive;
+  text-align: left;
+  margin-left: 57px;
+  margin-top: 30px;
+}
+
+

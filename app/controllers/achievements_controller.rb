@@ -6,9 +6,13 @@ class AchievementsController < ApplicationController
   end
 
   def index
-    @achievements = Achievement.all
-    gon.userAchivementsRatings = [2, 4, 5, 3]
-    gon.userAchivementsDates = ["24.05", "25.05", "26.05", "27.05"]
+    @achievements = current_user.achievements
+    gon.userAchivementsRatings = []
+    gon.userAchivementsDates = []
+    @achievements.each do |achievement|
+      gon.userAchivementsRatings << achievement.rating
+      gon.userAchivementsDates << achievement.date.strftime("%e/%m/%Y")
+    end
   end
 
   def create

@@ -25,7 +25,7 @@ Highcharts.chart('container', {
         },
         labels: {
             formatter: function () {
-                return this.value + '°';
+                return this.value + ',hjgdcjytrdf °';
             }
         }
     },

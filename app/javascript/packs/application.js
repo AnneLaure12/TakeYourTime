@@ -15,6 +15,9 @@ initSweetalert('#sweet-alert-demo', {
 });
 //
 
+// console.log(gon.userAchivementsRatings);
+// console.log(gon.userAchivementsDates);
+
 
 import 'mapbox-gl/dist/mapbox-gl.css';
 import { initMapbox } from '../plugins/init_mapbox';
@@ -36,6 +39,7 @@ exercises.forEach((exercise) =>  {
 console.log(gon.userAchivementsRatings);
 console.log(gon.userAchivementsDates);
 
+
 var Highcharts = require('highcharts');
 
 // Load module after Highcharts is loaded
@@ -44,10 +48,15 @@ require('highcharts/modules/exporting')(Highcharts);
 // Create the chart
 Highcharts.chart('container', {
     chart: {
-        type: 'spline'
+        type: 'spline',
+        backgroundColor: '#F7F3ED',
+        borderRadius: 5,
+        style: {
+            fontFamily: 'serif'
+        }
     },
     title: {
-        text: 'Follow your achievement!'
+        text: 'Your journey'
     },
     xAxis: {
         title: {
@@ -56,18 +65,22 @@ Highcharts.chart('container', {
         categories: gon.userAchivementsDates
     },
     yAxis: {
-        title: {
-            text: 'Improvement'
-        },
-        labels: {
-            formatter: function () {
-                return this.value + '°';
-            }
+      title: {
+          text: 'Improvement',
+      },
+      labels: {
+        formatter: function () {
+          console.log(this === array1)
+          var array1 = [0, 1, 2, 3, 4, 5]
+          if (array1.includes(this.value)) {
+           return this.value
+          }
         }
+      }
     },
     tooltip: {
         crosshairs: true,
-        shared: true
+        shared: true,
     },
     plotOptions: {
         spline: {
@@ -79,16 +92,20 @@ Highcharts.chart('container', {
         }
     },
     series: [{
-        name: 'Tokyo',
+        name: 'Follow your achievement!',
         marker: {
-            symbol: 'square'
+            symbol: 'round'
         },
-        data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, {
-            y: 26.5,
-            marker: {
-                symbol: 'url(https://www.highcharts.com/samples/graphics/sun.png)'
-            }
-        }, 23.3, 18.3, 13.9, 9.6]
+        data: gon.userAchivementsRatings
+        // data: [2, 2, 5, 1, 3, 5, 2, {
+        //     y: 5,
+        //     marker: {
+        //         symbol: 'url(https://www.highcharts.com/samples/graphics/sun.png)'
+        //    }
+        // }, 3, 3, 3, 5]
 
     }]
 });
+
+
+
