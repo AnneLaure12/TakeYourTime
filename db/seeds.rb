@@ -88,8 +88,8 @@ achievements_data = [ { date: "10/05/2019", mood: mood1, rating: 3, user: user1,
 
 puts "Creating classs..."
 
-Teacher.create!(name: "Denis", address: "59 Cours Saint-Louis, 33300 Bordeaux", description: "nice yoga and meditation courses")
-Teacher.create!(name: "Alice", address: "26 Cours de la Martinique, 33000 Bordeaux", description: "Dynamic yoga courses")
+Teacher.create!(name: "Denis", address: "59 Cours Saint-Louis, 33300 Bordeaux", description: "nice yoga and meditation courses", latitude: nil, longitude: nil)
+Teacher.create!(name: "Alice", address: "26 Cours de la Martinique, 33000 Bordeaux", description: "Dynamic yoga courses", latitude: nil, longitude: nil)
 
 puts "Finished !"
 
