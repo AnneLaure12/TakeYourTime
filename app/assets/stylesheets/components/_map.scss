@@ -2,10 +2,11 @@
 .mapboxgl-popup {
   max-width: 200px;
   font-family: "pacifico";
+  color: black;
 }
 
 .mapboxgl-popup-content {
-  font-family: "pacifico";
   text-align: center;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'pacifico', sans-serif;
+  color: black;
 }

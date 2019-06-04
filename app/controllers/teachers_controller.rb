@@ -8,7 +8,8 @@ class TeachersController < ApplicationController
       {
         lat: teacher.latitude,
         lng: teacher.longitude,
-        infoWindow: render_to_string(partial: "infowindow", locals: { teacher: teacher })
+        infoWindow: render_to_string(partial: "infowindow", locals: { teacher: teacher }),
+        image_url: helpers.asset_url('mark2.jpg')
       }
     end
   end
