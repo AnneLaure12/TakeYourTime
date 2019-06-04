@@ -1,10 +1,19 @@
 import "bootstrap";
+import WOW from 'wow.js';
 
 import 'mapbox-gl/dist/mapbox-gl.css';
 import { initMapbox } from '../plugins/init_mapbox';
 
 initMapbox();
 //
+
+const wow = new WOW({
+  boxClass: 'wow',
+  animateClass: 'animated',
+  offset: 0,
+  live: true
+});
+
 console.log(gon.userAchivementsRatings);
 console.log(gon.userAchivementsDates);
 

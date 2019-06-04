@@ -6,7 +6,8 @@
   <div class="container">
     <div class="row">
       <% @exercices.each do | exercice | %>
-        <div class="col-lg-4">
+
+        <div class="col-lg-4 wow bounceInUp">
           <%= link_to exercice_path(exercice) do %>
             <div class="tyt-card", style= "background: url(<%= image_path("backimage_#{rand(6)}.png") %>)">
               <div class="card-category">
