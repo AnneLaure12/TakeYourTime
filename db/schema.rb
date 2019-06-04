@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_29_144323) do
+ActiveRecord::Schema.define(version: 2019_06_03_162621) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,6 +27,17 @@ ActiveRecord::Schema.define(version: 2019_05_29_144323) do
     t.index ["mood_id"], name: "index_achievements_on_mood_id"
     t.index ["rating"], name: "index_achievements_on_rating"
     t.index ["user_id"], name: "index_achievements_on_user_id"
+  end
+
+  create_table "bookings", force: :cascade do |t|
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "title"
+    t.bigint "teacher_id"
+    t.date "date"
+    t.index ["teacher_id"], name: "index_bookings_on_teacher_id"
+    t.index ["user_id"], name: "index_bookings_on_user_id"
   end
 
   create_table "exercices", force: :cascade do |t|
@@ -47,6 +58,16 @@ ActiveRecord::Schema.define(version: 2019_05_29_144323) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "teachers", force: :cascade do |t|
+    t.string "name"
+    t.string "address"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.float "latitude"
+    t.float "longitude"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -64,5 +85,7 @@ ActiveRecord::Schema.define(version: 2019_05_29_144323) do
 
   add_foreign_key "achievements", "exercices"
   add_foreign_key "achievements", "users"
+  add_foreign_key "bookings", "teachers"
+  add_foreign_key "bookings", "users"
   add_foreign_key "exercices", "moods"
 end

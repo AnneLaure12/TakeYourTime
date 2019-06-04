@@ -116,8 +116,8 @@ SimpleForm.setup do |config|
   # with `html: { :class }`. Defaulting to none.
   # config.default_form_class = nil
 
-  # You can define which elements should obtain additional classes
-  # config.generate_additional_classes_for = [:wrapper, :label, :input]
+  # You can define which elements should obtain additional classs
+  # config.generate_additional_classs_for = [:wrapper, :label, :input]
 
   # Whether attributes are required by default (or not). Default is true.
   # config.required_by_default = true
@@ -141,7 +141,7 @@ SimpleForm.setup do |config|
   # type as key and the wrapper that will be used for all inputs with specified type.
   # config.wrapper_mappings = { string: :prepend }
 
-  # Namespaces where SimpleForm should look for custom input classes that
+  # Namespaces where SimpleForm should look for custom input classs that
   # override default inputs.
   # config.custom_inputs_namespaces << "CustomInputs"
 
@@ -173,7 +173,7 @@ SimpleForm.setup do |config|
   # Defines which i18n scope will be used in Simple Form.
   # config.i18n_scope = 'simple_form'
 
-  # Defines validation classes to the input_field. By default it's nil.
+  # Defines validation classs to the input_field. By default it's nil.
   # config.input_field_valid_class = 'is-valid'
   # config.input_field_error_class = 'is-invalid'
 end

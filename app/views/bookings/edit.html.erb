@@ -1,0 +1,10 @@
+
+<h3 style="text-align: center;"> Want to update ?</h3>
+
+<div style="margin-top: 32px;">
+  <%= simple_form_for [@contract, @booking] do |f| %>
+  <%= f.association :teacher%>
+  <%= f.input :date, as: :date %>
+  <%= f.button :submit, "Update", class: "btn-bouton-show" %>
+<% end %>
+</div>
