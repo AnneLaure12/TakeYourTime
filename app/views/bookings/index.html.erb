@@ -2,7 +2,7 @@
 
 <ul>
   <% @bookings.each do |booking| %>
-    <li> <%= "Your teacher is #{booking.teacher.name}" %> </li>
+    <li> <%= "Your studio is #{booking.teacher.name}" %> </li>
     <li> <%= booking.title %> </li>
     <li> <%= "Start on #{booking.date.strftime("%A %e %B")}"%> </li>
     <li> <%= "for #{booking.user.first_name}" %> </li>
