@@ -1,5 +1,7 @@
 import "bootstrap";
 import { initSweetalert } from '../plugins/init_sweetalert';
+import 'mapbox-gl/dist/mapbox-gl.css';
+import { initMapbox } from '../plugins/init_mapbox';
 
 initSweetalert('#sweet-alert-demo', {
   title: "Congratulations !",
@@ -13,32 +15,12 @@ initSweetalert('#sweet-alert-demo', {
     link.click();
   }
 });
-//
-
-// ERROR 500:
-
-$(".full-screen").mousemove(function(event) {
-  var eye = $(".eye");
-  var x = (eye.offset().left) + (eye.width() / 2);
-  var y = (eye.offset().top) + (eye.height() / 2);
-  var rad = Math.atan2(event.pageX - x, event.pageY - y);
-  var rot = (rad * (180 / Math.PI) * -1) + 180;
-  eye.css({
-    '-webkit-transform': 'rotate(' + rot + 'deg)',
-    '-moz-transform': 'rotate(' + rot + 'deg)',
-    '-ms-transform': 'rotate(' + rot + 'deg)',
-    'transform': 'rotate(' + rot + 'deg)'
-  });
-});
-
 
 
 // console.log(gon.userAchivementsRatings);
 // console.log(gon.userAchivementsDates);
 
 
-import 'mapbox-gl/dist/mapbox-gl.css';
-import { initMapbox } from '../plugins/init_mapbox';
 
 initMapbox();
 

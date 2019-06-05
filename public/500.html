@@ -1,78 +1,192 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>We're sorry, but something went wrong (500)</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <style>
-  .full-screen {
-  background-color: rgb(51, 51, 51);
-  width: 100vw;
-  height: 100vh;
-  color: white;
-  font-family: 'Arial Black';
-  text-align: center;
+  <head>
+    <title>We're sorry, but something went wrong (500)</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <style>
+:root {
+  --size: 20; /*size*/
+  --background-color: #F8BBD0;
+  --color-5: #D81B60;
+  --color-0-l: #7B1FA2;
+  --color-0-r: #1976D2;
+  --animation-speed: 4s;
+  --play-state: running;
+  --emoji: url("https://upload.wikimedia.org/wikipedia/commons/1/11/Twemoji_1f605.svg");
+  /*https://commons.wikimedia.org/wiki/Category:Twemoji_smilies*/
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: var(--background-color);
+}
+
+.c {
+  position: absolute;
+  width: auto;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: calc(var(--size) / 5 * 1vw);
+}
+
+.g {
+  position: relative;
+  width: calc(var(--size) * 1vw);
+  height: calc(var(--size) * 1vw);
+  margin: 0;
+}
+
+.f {
+  font-size: calc(var(--size) * 1.5vw);
+  font-family: "Nova Oval", cursive;
+  line-height: calc(var(--size) * 1vw);
+  color: var(--color-5);
+}
+
+.m {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.p {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  overflow: hidden;
+}
+
+.p-1 {
+  top: 0;
+  left: 0;
+  transform-origin: bottom right;
+  transform: rotateZ(0deg);
+  animation: var(--animation-speed) infinite var(--play-state) p-1-a;
+}
+
+.p-2 {
+  top: 0;
+  left: 50%;
+  transform-origin: bottom left;
+  transform: rotateZ(0deg);
+  animation: var(--animation-speed) infinite var(--play-state) p-2-a;
+}
+
+.p::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  border-radius: 50%;
+}
+
+.p-1::before {
+  top: 0;
+  left: 0;
+  box-shadow: inset 0 0 0 calc(var(--size) / 5 * 1vw) var(--color-0-l);
+}
+
+.p-2::before {
+  top: 0;
+  left: -100%;
+  box-shadow: inset 0 0 0 calc(var(--size) / 5 * 1vw) var(--color-0-r);
+}
+
+.t {
+  position: absolute;
+  width: calc((var(--size) / 5 - 1) * 1vw);
+  height: calc(100% - 1vw);
+  top: 50%;
+  left: 50%;
+  transform-origin: center center;
+  transform: translateX(-50%) translateY(-50%) rotateZ(0deg);
+  background: var(--emoji);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  animation: var(--animation-speed) linear infinite var(--play-state) t-a;
+}
+
+@keyframes t-a {
+  0% {
+    transform: translateX(-50%) translateY(-50%) rotateZ(0deg);
   }
-
-  .container {
-    padding-top: 4em;
-    width: 50%;
-    display: block;
-    margin: 0 auto;
+  50% {
+    transform: translateX(-50%) translateY(-50%) rotateZ(-180deg);
   }
-
-  .error-num {
-    font-size: 8em;
+  0% {
+    transform: translateX(-50%) translateY(-50%) rotateZ(-360deg);
   }
+}
 
-  .eye {
-    background: #fff;
-    border-radius: 50%;
-    display: inline-block;
-    height: 100px;
-    position: relative;
-    width: 100px;
-    &::after {
-      background: #000;
-      border-radius: 50%;
-      bottom: 56.1px;
-      content: ' ';
-      height: 33px;
-      position: absolute;
-      right: 33px;
-      width: 33px;
-    }
+@keyframes p-1-a {
+  0% {
+    transform: rotateZ(0deg);
   }
-
-  .italic {
-    font-style: italic;
+  25% {
+    transform: rotateZ(-180deg);
   }
-
-  p {
-    margin-bottom: 4em;
+  50% {
+    transform: rotateZ(-180deg);
   }
-
-  a {
-    color: white;
-    text-decoration: none;
-    text-transform: uppercase;
-    &:hover {
-      color: lightgray;
-    }
+  75% {
+    transform: rotateZ(-360deg);
   }
-  </style>
-</head>
+  100% {
+    transform: rotateZ(-360deg);
+  }
+}
 
-<body>
-<div class="full-screen">
-      <div class='container'>
-        <span class="error-num">5</span>
-        <div class='eye'></div>
-        <div class='eye'></div>
+@keyframes p-2-a {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  25% {
+    transform: rotateZ(0deg);
+  }
+  50% {
+    transform: rotateZ(-180deg);
+  }
+  75% {
+    transform: rotateZ(-180deg);
+  }
+  100% {
+    transform: rotateZ(-360deg);
+  }
+}
 
-        <p class="sub-text">Oh eyeballs! Something went wrong. We're <span class="italic">looking</span> to see what happened.</p>
-        <a href="/">>Go back<</a>
-      </div>
+
+    </style>
+  </head>
+
+  <body>
+    <div class="c">
+
+  <div class="g f">5</div>
+
+  <div class="g">
+    <div class="m">
+      <div class="p p-1"></div>
+      <div class="p p-2"></div>
+      <div class="t"></div>
     </div>
-</body>
+  </div>
+
+  <div class="g">
+    <div class="m">
+      <div class="p p-1"></div>
+      <div class="p p-2"></div>
+      <div class="t"></div>
+    </div>
+  </div>
+
+</div>
+  </body>
 
 </html>
