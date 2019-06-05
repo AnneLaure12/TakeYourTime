@@ -11,3 +11,19 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+  h1 {
+  font-size: 60px;
+  font-family: 'Pacifico', cursive;
+  text-align: center;
+  // -webkit-background-clip: text;
+  // -webkit-text-fill-color: transparent;
+  color: #C72C41;
+  // background-image: url(homepage_picture.jpg);
+  // background-size: cover;
+  // filter: contrast(110%);
+  // filter: brightness(130%);
+  text-align: center;
+  opacity: 0.9;
+  margin-bottom: 20px;
+  }
