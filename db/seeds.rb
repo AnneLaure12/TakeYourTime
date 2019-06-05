@@ -78,6 +78,8 @@ exo1, exo2, exo3, exo4, exo5 = Exercice.all
 
 puts "Creating achievements..."
 
+
+
 Achievement.create!(date: "10/05/2019", mood: mood1, rating: 3, user: user1, exercice: exo1)
 Achievement.create!(date: "28/05/2019", mood: mood2, rating: 4, user: user2, exercice: exo2)
 
