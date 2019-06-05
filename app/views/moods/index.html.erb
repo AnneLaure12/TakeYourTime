@@ -1,17 +1,26 @@
 <div class="moods-index-background">
 
-  <h1>How do you feel today ?</h1>
-<div class="container">
-    <div class="row">
-      <% @moods.each do | mood | %>
-        <div class="col-lg-3">
-          <%= link_to exercice_path(select_exos(mood)) do %>
-              <div class="moods-card-category">
-                <%= mood.name %>
-              </div>
+  <span class= "dollar">$</span>
+  <div class= "mood-index-wrapper">
+    <div class= "mood-index-title">
+     <h1>How do you feel today ?</h1>
+    </div>
+    <div class= "moods-cards-wrapper px-5">
+      <div class="container-fluid">
+        <div class="row">
+          <% @moods.each do | mood | %>
+            <div class="col-lg-3">
+              <%= link_to exercice_path(select_exos(mood)) do %>
+                <div class="d-flex justify-content-center w-100">
+                  <div class="moods-card-category d-flex justify-content-center align-items-center ">
+                    <div><%= mood.name %></div>
+                  </div>
+                </div>
+              <% end %>
             </div>
           <% end %>
-      <% end %>
+        </div>
+      </div>
     </div>
   </div>
 </div>

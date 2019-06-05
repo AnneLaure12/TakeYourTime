@@ -1,3 +1,10 @@
+
+.general {
+  width: 100vw;
+  height: 100vh;
+  background-color: #FFFFFF;
+}
+
 h1 {
   font-family: josefin;
   color: gray;
@@ -9,43 +16,42 @@ h1 {
 
 .tyt-card {
   border-radius: 50%;
-  box-shadow: 2px 2px 1px 1px rgba(0, 0, 240, .1);
-  width: 50%;
-  height: 50%;
+  box-shadow: 2px 2px 1px 1px rgba(110, 110, 110, .1);
+  background-image: url("https://i.pinimg.com/564x/8a/e0/b8/8ae0b80c16498671ec54914f284470c5.jpg");
+  background-size: cover;
+  width: 250px;
+  height: 250px;
   margin: 8px;
+}a:hover {
+  text-decoration: none;
 }
 .card-category {
   font-family: "pacifico";
   font-size: 24px;
-  font-style: italic;
-  color: white;
+  color: #C72C41;
   font-weight: bolder;
   text-align: center;
-  padding-top: 80px;
+  padding-top: 100px;
 }
 .search {
-  position: absolute;
-  bottom: 25px;
-  right: 25px;
-  color: #8D7B8B;
-  background-color: #F0E9E9;
-  border-color: #8D7B8B;
+  color: #C72C41;
+  background-color: white;
+  border-color: #C72C41;
   border: 1px solid;
-  border-radius: 30px;
-  padding: 10px;
-  width: 165px;
-  height: 55px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  width: 120px;
+  height: 38px;
   font-size: 22px;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bolder;
 }
-.search:hover {
-  color: #6E697D;
-  background-color: #F0E9E9;
-  border-color: #6E697D;
-  box-shadow: 0.2px 0.2px;
-}
+
 .exo-form{
-  color:: gray;
-  font-family: "pacifico";
-  font-weight: lighter;
+  position: absolute;
+  left: 490px;
+  top: 130px;
+  color:: #C72C41;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bolder;
 }
