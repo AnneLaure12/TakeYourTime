@@ -10,7 +10,7 @@
     "sweetalert": "^2.1.2",
     "sweetalert2": "^8.11.7",
     "mapbox-gl": "^1.0.0",
-    "popper.js": "^1.15.0",
+    "popper.js": "^1.15.0"
   },
   "devDependencies": {
     "webpack-dev-server": "^3.4.1"
