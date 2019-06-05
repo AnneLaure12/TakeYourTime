@@ -15,6 +15,24 @@ initSweetalert('#sweet-alert-demo', {
 });
 //
 
+// ERROR 500:
+
+$(".full-screen").mousemove(function(event) {
+  var eye = $(".eye");
+  var x = (eye.offset().left) + (eye.width() / 2);
+  var y = (eye.offset().top) + (eye.height() / 2);
+  var rad = Math.atan2(event.pageX - x, event.pageY - y);
+  var rot = (rad * (180 / Math.PI) * -1) + 180;
+  eye.css({
+    '-webkit-transform': 'rotate(' + rot + 'deg)',
+    '-moz-transform': 'rotate(' + rot + 'deg)',
+    '-ms-transform': 'rotate(' + rot + 'deg)',
+    'transform': 'rotate(' + rot + 'deg)'
+  });
+});
+
+
+
 // console.log(gon.userAchivementsRatings);
 // console.log(gon.userAchivementsDates);
 
@@ -23,8 +41,9 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 import { initMapbox } from '../plugins/init_mapbox';
 
 initMapbox();
-//
 
+
+//Exrcises animate
 // selectionner tous les exercices => mettre ds une const forEach
 // créer une const = tableau de string dans class name(en choisir 6)
 // => forEach  add class pour ch element exercice
@@ -35,6 +54,15 @@ exercises.forEach((exercise) =>  {
   const rand = animate[Math.floor(Math.random() * animate.length)];
   exercise.classList.add(rand);
 });
+//Moods animate
+const moods = document.querySelectorAll(".tyt-cards");
+moods.forEach((mood) => {
+  const animate = ["fadeInDown"];
+  const rand = animate[Math.floor(Math.random() * animate.length)];
+  exercise.classList.add(rand);
+});
+
+
 
 console.log(gon.userAchivementsRatings);
 console.log(gon.userAchivementsDates);
