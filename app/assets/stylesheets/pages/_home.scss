@@ -4,7 +4,7 @@
   height: 70px;
   z-index: 100;
   font-family: 'Pacifico', cursive;
-  font-size: 24px;
+  font-size: 36px;
   a {
      text-decoration: none;
      color: #508CA9;
@@ -21,13 +21,15 @@
   }
 }
 
+
+.avatar{
+  width: 55px;
+}
+
 .d-flex {
   padding: 16px;
   text-decoration: none;
 }
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
-  }
 
 .home-container {
   width : 100vw;
@@ -35,8 +37,11 @@
   // position: absolute;
   // bottom:0;
   // right: 0;
+
   background-image: asset-url('homepage_picture.jpg');
+  //filter: grayscale(100%);
   background-size: cover;
+  // background-blend-mode: saturation;
   background-position: center;
   font-family: 'Pacifico', cursive;
   position: relative;
@@ -73,10 +78,11 @@
   color: black;
   padding-top: 45px;
   text-align: left;
+  font-weight: bolder;
 }
 
 .card-paragraphe {
-  font-size: 15px;
+  font-size: 18px;
   padding-top: 60px;
   font-family: 'Nanum Myeongjo', serif;
   // font-family: 'Pacifico', cursive;
