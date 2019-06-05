@@ -3,7 +3,7 @@
   <%= link_to root_path do %>
     <div class="d-flex">
       <%#= image_tag "mon-image", class: "" %>
-      <div class="<%= 'white-color' if url_for == root_path %>">TakeYourTime
+      <div class="<%= url_for == root_path ? 'white-color' : "logo-background" %>">TakeYourTime
       </div>
     </div>
   <% end %>

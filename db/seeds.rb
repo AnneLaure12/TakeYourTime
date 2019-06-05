@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 puts 'Start destroy'
+Booking.destroy_all
 Achievement.destroy_all
 User.destroy_all
 Exercice.destroy_all
@@ -63,10 +64,10 @@ mood1, mood2, mood3, mood4, mood5, mood6, mood7, mood8 = Mood.all
 #after refacto
 puts "Creating exercices..."
 
-exos_data = [ { name: "Respiration", description: "exercices de respiration", mood: mood1 },
-              { name: "Yoga", description: "postures de yoga", mood: mood1 },
+exos_data = [ { name: "Yoga", video: "https://www.youtube.com/embed/CA5wTlsn6ek", mood: mood1 },
+              { name: "Meditation", photo: "meditation.jpg", mood: mood1 },
               { name: "Meditation", description: "exercices de meditation", mood: mood2 },
-              { name: "Static position", description: "don't move and breath", mood: mood2 },
+              { name: "Writing Exercise", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt fugit, voluptatibus eveniet id omnis quos veniam dolore ut tempora neque debitis porro commodi, quis ratione assumenda! Eveniet ipsum, voluptatibus maxime!", mood: mood2 },
               { name: "Dynamic position", description: "chake your body!", mood: mood3 },
               { name: "Writing Exercise", description: "Write down three things you're grateful for", mood: mood3 },
               { name: "Respiration", description: "exercices de respiration", mood: mood4 },
