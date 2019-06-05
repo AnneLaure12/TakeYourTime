@@ -35,6 +35,7 @@ puts "Creating moods..."
 
 # after refacto
 moods_data = [
+
   { name: "Anxious"}, {name: "Tired"}, {name: "Angry"}, {name: "Upset"}, {name: "Excited"}, {name: "Strong"}, {name: "Happy"}, {name: "Peaceful"}  ]
 Mood.create!(moods_data)
 mood1, mood2, mood3, mood4, mood5, mood6, mood7, mood8 = Mood.all
@@ -88,13 +89,14 @@ exo1, exo2, exo3, exo4, exo5, exo6, exo7, exo8, exo9, exo10, exo11, exo12, exo13
 
 puts "Creating achievements..."
 
-Achievement.create!(date: "10/05/2019", mood: mood1, rating: 3, user: user1, exercice: exo1)
-Achievement.create!(date: "28/05/2019", mood: mood2, rating: 4, user: user2, exercice: exo2)
-
 
 achievements_data = [ { date: "10/05/2019", mood: mood1, rating: 3, user: user1, exercice: exo1 },
                       { date: "28/05/2019", mood: mood2, rating: 4, user: user2, exercice: exo2 },
                     ]
+
+Achievement.create!(achievements_data)
+achievement1, achievement2 = Achievement.all
+
 
 puts "Creating classs..."
 
