@@ -35,9 +35,10 @@ puts "Creating moods..."
 
 # after refacto
 moods_data = [
-  { name: "stressed"}, {name: "happy"}, {name: "neutral"} ]
+
+  { name: "Anxious"}, {name: "Tired"}, {name: "Angry"}, {name: "Upset"}, {name: "Excited"}, {name: "Strong"}, {name: "Happy"}, {name: "Peaceful"}  ]
 Mood.create!(moods_data)
-mood1, mood2, mood3 = Mood.all
+mood1, mood2, mood3, mood4, mood5, mood6, mood7, mood8 = Mood.all
 
 
 #Cas 1
@@ -67,10 +68,20 @@ exos_data = [ { name: "Respiration", description: "exercices de respiration", mo
               { name: "Meditation", description: "exercices de meditation", mood: mood2 },
               { name: "Static position", description: "don't move and breath", mood: mood2 },
               { name: "Dynamic position", description: "chake your body!", mood: mood3 },
-              { name: "Writing Exercise", description: "Write down three things you're grateful for", mood: mood3 }
+              { name: "Writing Exercise", description: "Write down three things you're grateful for", mood: mood3 },
+              { name: "Respiration", description: "exercices de respiration", mood: mood4 },
+              { name: "Yoga", description: "postures de yoga", mood: mood4 },
+              { name: "Meditation", description: "exercices de meditation", mood: mood5 },
+              { name: "Static position", description: "don't move and breath", mood: mood5 },
+              { name: "Dynamic position", description: "chake your body!", mood: mood6 },
+              { name: "Writing Exercise", description: "Write down three things you're grateful for", mood: mood6 },
+              { name: "Respiration", description: "exercices de respiration", mood: mood7 },
+              { name: "Yoga", description: "postures de yoga", mood: mood7 },
+              { name: "Meditation", description: "exercices de meditation", mood: mood8 },
+              { name: "Static position", description: "don't move and breath", mood: mood8 }
             ]
 Exercice.create!(exos_data)
-exo1, exo2, exo3, exo4, exo5 = Exercice.all
+exo1, exo2, exo3, exo4, exo5, exo6, exo7, exo8, exo9, exo10, exo11, exo12, exo13, exo14, exo15, exo16 = Exercice.all
 
 
 
@@ -78,13 +89,14 @@ exo1, exo2, exo3, exo4, exo5 = Exercice.all
 
 puts "Creating achievements..."
 
-Achievement.create!(date: "10/05/2019", mood: mood1, rating: 3, user: user1, exercice: exo1)
-Achievement.create!(date: "28/05/2019", mood: mood2, rating: 4, user: user2, exercice: exo2)
-
 
 achievements_data = [ { date: "10/05/2019", mood: mood1, rating: 3, user: user1, exercice: exo1 },
                       { date: "28/05/2019", mood: mood2, rating: 4, user: user2, exercice: exo2 },
                     ]
+
+Achievement.create!(achievements_data)
+achievement1, achievement2 = Achievement.all
+
 
 puts "Creating classs..."
 
