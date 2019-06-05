@@ -1,6 +1,5 @@
 .first-dash-container {
   background-color: white;
-  height: 100vh;
 }
 
 .dashboard-container {
@@ -25,19 +24,19 @@ border: #F7F3ED solid 1px;
   border-radius: 1px;
   margin-bottom: 3px;
   height: 120px;
-
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display : flex;
-  font-family: 'Nanum Myeongjo', serif;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
 }
 
 .dashboard-date {
-  font-family: 'Nanum Myeongjo', serif;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .dashboard-phrase {
-  font-family: 'Nanum Myeongjo', serif;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .card-product img {
@@ -65,28 +64,39 @@ border: #F7F3ED solid 1px;
 }
 
 .exercises-link {
-  font-family: 'Nanum Myeongj', serif;
+  font-family: 'Quicksand', sans-serif;
   position: absolute;
   bottom: 20px;
-  right: 80px;
+  right: 30px;
   font-size: 16px;
   padding: 16px;
-a {
-   text-decoration: none;
-   color: black;
+} a:hover {
+  text-decoration: none;
+  color: #C72C41;
 }
 
-a.hover {
-
-}
-
-}
 
 .scroll-title {
-  font-family: 'Pacifico', cursive;
+  font-family: 'Quicksand', sans-serif;
   text-align: left;
   margin-left: 57px;
-  margin-top: 30px;
+  margin-top: 10px;
+  font-size: 27px;
+  color: #C72C41;
 }
+
+.btn-to-exercices {
+  border: 1px solid;
+  border-radius: 30px;
+  padding: 10px;
+  width: 165px;
+  height: 55px;
+  font-size: 18px;
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+  border-color: #C72C41;
+  color: #C72C41;
+}
+
 
 

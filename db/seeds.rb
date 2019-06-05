@@ -90,8 +90,13 @@ exo1, exo2, exo3, exo4, exo5, exo6, exo7, exo8, exo9, exo10, exo11, exo12, exo13
 puts "Creating achievements..."
 
 
-achievements_data = [ { date: "10/05/2019", mood: mood1, rating: 3, user: user1, exercice: exo1 },
-                      { date: "28/05/2019", mood: mood2, rating: 4, user: user2, exercice: exo2 },
+achievements_data = [ { date: "31/05/2019", mood: mood1, rating: 1, user: user2, exercice: exo1 },
+                      { date: "01/06/2019", mood: mood2, rating: 0, user: user2, exercice: exo2 },
+                      { date: "02/06/2019", mood: mood2, rating: 3, user: user2, exercice: exo2 },
+                      { date: "03/06/2019", mood: mood2, rating: 3, user: user2, exercice: exo2 },
+                      { date: "04/06/2019", mood: mood2, rating: 2, user: user2, exercice: exo2 },
+                      { date: "05/06/2019", mood: mood2, rating: 3, user: user2, exercice: exo2 },
+                      { date: "06/06/2019", mood: mood2, rating: 4, user: user2, exercice: exo2 }
                     ]
 
 Achievement.create!(achievements_data)
