@@ -1,12 +1,12 @@
 <div class="moods-index-background">
 
-  <h1>How do you feel today ?</h1>
+  <h1 class="pt-5">How do you feel today ?</h1>
 <div class="container">
     <div class="row">
       <% @moods.each do | mood | %>
         <div class="col-lg-3">
           <%= link_to exercice_path(select_exos(mood)) do %>
-              <div class="moods-card-category">
+              <div class="moods-card-category animate">
                 <%= mood.name %>
               </div>
             </div>

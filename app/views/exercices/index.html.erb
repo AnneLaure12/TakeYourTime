@@ -1,7 +1,14 @@
 
 <div class="general">
 
-  <h1>Exercises</h1>
+  <h1 class="pt-5">Exercises</h1>
+
+  <div class="exo-form">
+    <%= simple_form_for :search, method: "GET", html: { class: 'form-inline' } do |f| %>
+      <%= f.input :name, input_html: {value: ""} %>
+      <%= f.submit "Search", class: "search" %>
+    <% end %>
+  </div>
 
   <div class="container">
     <div class="row">
@@ -9,7 +16,7 @@
 
         <div class="col-lg-4 ">
           <%= link_to exercice_path(exercice) do %>
-            <div class="tyt-card animated", style= "background: url(<%= image_path("backimage_#{rand(6)}.png") %>)">
+            <div class="tyt-card animated">
               <div class="card-category ">
                 <%= exercice.name %>
               </div>
@@ -20,10 +27,4 @@
     </div>
   </div>
 
-  <div class="exo-form">
-    <%= simple_form_for :search, method: "GET", html: { class: 'form-inline' } do |f| %>
-      <%= f.input :name, input_html: {value: ""} %>
-      <%= f.submit "Search", class: "search" %>
-    <% end %>
-  </div>
 </div>
