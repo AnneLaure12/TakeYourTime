@@ -32,16 +32,18 @@ initMapbox();
 // la string aura pour valeur une des class choisi parmis les 6
 const exercises = document.querySelectorAll(".tyt-card");
 exercises.forEach((exercise) =>  {
-  const animate = ["bounce", "pulse", "wobble", "rubberBand", "rollIn", "rotateIn"];
+  const animate = ["fadeInDown", "fadeInDown", "fadeInDown", "fadeInDown", "fadeInDown", "fadeInDown"];
   const rand = animate[Math.floor(Math.random() * animate.length)];
   exercise.classList.add(rand);
 });
+
+
 //Moods animate
 const moods = document.querySelectorAll(".tyt-cards");
 moods.forEach((mood) => {
-  const animate = ["fadeInDown"];
+  const animate = ["fadeInDown","fadeInDown","fadeInDown","fadeInDown","fadeInDown","fadeInDown",];
   const rand = animate[Math.floor(Math.random() * animate.length)];
-  exercise.classList.add(rand);
+  mood.classList.add(rand);
 });
 
 
