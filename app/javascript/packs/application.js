@@ -39,7 +39,7 @@ exercises.forEach((exercise) =>  {
 
 
 //Moods animate
-const moods = document.querySelectorAll(".tyt-cards");
+const moods = document.querySelectorAll(".moods-card-category");
 moods.forEach((mood) => {
   const animate = ["fadeInDown","fadeInDown","fadeInDown","fadeInDown","fadeInDown","fadeInDown",];
   const rand = animate[Math.floor(Math.random() * animate.length)];
