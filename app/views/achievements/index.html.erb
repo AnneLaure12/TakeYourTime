@@ -1,8 +1,9 @@
 <%= include_gon %>
 
 <div class= "first-dash-container">
+ <div class= "achievements-title-wrapper pt-5">
 <h1>Achievements</h1>
-
+  </div>
 
 <div class= "dashboard-container">
   <p class= "scroll-title"> Your daily exercises </p>
@@ -11,7 +12,7 @@
     <div class="row">
       <div class="col-5">
         <div class= "dash-wrapper-left">
-          <% @achievements.each do | achievement | %>
+          <% @achievements.reverse.each do | achievement | %>
             <div class="card-product">
               <img src="https://i.pinimg.com/564x/8a/e0/b8/8ae0b80c16498671ec54914f284470c5.jpg">
               <div class="card-product-infos">
@@ -35,7 +36,7 @@
 </div>
 
   <div class= "exercises-link">
-    <%= link_to "Take more time", exercices_path(@exercice) %>
+    <%= link_to "More time", exercices_path(@exercice), class: "btn-to-exercices" %>
   </div>
 </div>
 
