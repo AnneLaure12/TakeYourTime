@@ -52,7 +52,7 @@ Highcharts.chart('container', {
         backgroundColor: '#F7F3ED',
         borderRadius: 5,
         style: {
-            fontFamily: 'serif'
+            fontFamily: 'Quicksand',
         }
     },
     title: {
