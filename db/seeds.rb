@@ -67,7 +67,7 @@ puts "Creating exercices..."
 exos_data = [ { name: "Yoga", video: "https://www.youtube.com/embed/CA5wTlsn6ek", mood: mood1 },
               { name: "Meditation", photo: "meditation.jpg", mood: mood1 },
               { name: "Meditation", description: "exercices de meditation", mood: mood2 },
-              { name: "Writing Exercise", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt fugit, voluptatibus eveniet id omnis quos veniam dolore ut tempora neque debitis porro commodi, quis ratione assumenda! Eveniet ipsum, voluptatibus maxime!", mood: mood2 },
+              { name: "Writing Exercise", description: "Find a nice and quiet spot. Take a good cup of coffee or tea, as you like! Open your journal and start writing the upsetting things you are carrying recently. Finish your exercise by writting down three things you are grateful for in your life. At the end, close your eyes and take three deep breathes.", mood: mood2 },
               { name: "Dynamic position", description: "chake your body!", mood: mood3 },
               { name: "Writing Exercise", description: "Write down three things you're grateful for", mood: mood3 },
               { name: "Respiration", description: "exercices de respiration", mood: mood4 },
