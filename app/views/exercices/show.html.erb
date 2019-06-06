@@ -8,7 +8,7 @@
 
       <div class="exercise-show-shuffle">
         <% unless @remove_btn %>
-            <%= link_to 'Shuffle!', exercice_path(select_another_exos(@exercices,
+            <%= link_to 'Shuffle', exercice_path(select_another_exos(@exercices,
             @exercice, @mood), remove_btn: true), class: "btn show-exercise-btn shuffle" %>
           <% else %>
             <div id="blank-shuffle"></div>
@@ -31,13 +31,13 @@
 
 
 
-      <button id="sweet-alert-demo" class="btn show-exercise-btn done">Done!</button>
+      <button id="sweet-alert-demo" class="btn show-exercise-btn done">Done</button>
 
   </div>
 
     <div class="exercise-show-review">
 
-      <h2>How was your exercise ?</h2>
+      <h2>How was your exercise today?</h2>
 
       <div class="exercises-show-full-sliderbar">
         <%= simple_form_for [@exercice, @achievement] do |f| %>
