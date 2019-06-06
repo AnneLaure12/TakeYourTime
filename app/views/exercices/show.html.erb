@@ -4,18 +4,11 @@
     <h1><%= @exercice.name %></h1>
   </div>
 
-
-
-
-
-
-
-
   <div class="exercise-show-global-content">
 
       <div class="exercise-show-shuffle">
         <% unless @remove_btn %>
-            <%= link_to 'Shuffle!', exercice_path(select_another_exos(@exercices,
+            <%= link_to 'Shuffle', exercice_path(select_another_exos(@exercices,
             @exercice, @mood), remove_btn: true), class: "btn show-exercise-btn shuffle" %>
           <% else %>
             <div id="blank-shuffle"></div>
@@ -29,7 +22,7 @@
           <% elsif @exercice.photo.present? %>
             <div class="image-exercise"> <%= image_tag((@exercice.photo), class: "mx-auto d-block")%></div>
           <% elsif @exercice.video.present? %>
-            <iframe width="600" height="400" src="<%= @exercice.video %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="600" height="335" src="<%= @exercice.video %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           <% end %>
 
         </div>
@@ -38,27 +31,20 @@
 
 
 
-      <button id="sweet-alert-demo" class="btn show-exercise-btn done">Done!</button>
-
-
-
+      <button id="sweet-alert-demo" class="btn show-exercise-btn done">Done</button>
 
   </div>
 
-
-
-
     <div class="exercise-show-review">
 
-      <h2>How was your exercise ?</h2>
-      <p>Move the cursor according to your new mood !</p>
-
+      <h2>How was your exercise today?</h2>
 
       <div class="exercises-show-full-sliderbar">
         <%= simple_form_for [@exercice, @achievement] do |f| %>
         <div class="slidecontainer">
           <input type="range" min="0" max="5" value="0" class="slider" id="achievement_rating" name="achievement[rating]">
         </div>
+        <h3 class="text-center" id='sliderFeedback'>Move the cursor according to your new mood !</h3>
       </div>
         <%= f.button :submit, "Done!", class: "d-none", id: "submit-button" %>
       <% end %>

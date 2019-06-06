@@ -2,12 +2,11 @@ import "bootstrap";
 import { initSweetalert } from '../plugins/init_sweetalert';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import { initMapbox } from '../plugins/init_mapbox';
+import { handleSlider } from '../plugins/handle_slider';
 
 initSweetalert('#sweet-alert-demo', {
   title: "Congratulations !",
-  text: "Your daily exercise is done !",
-  confirmButtonColor: '#DD6B55',
-  confirmButtonText: 'Yes',
+  // text: "Your daily exercise is done !",
   icon: "success"
 }, (value) => {
   if (value) {
@@ -17,12 +16,8 @@ initSweetalert('#sweet-alert-demo', {
 });
 
 
-// console.log(gon.userAchivementsRatings);
-// console.log(gon.userAchivementsDates);
-
-
-
 initMapbox();
+handleSlider();
 
 
 //Exrcises animate
@@ -32,25 +27,14 @@ initMapbox();
 // la string aura pour valeur une des class choisi parmis les 6
 const exercises = document.querySelectorAll(".tyt-card");
 exercises.forEach((exercise) =>  {
-  const animate = ["fadeInDown", "fadeInDown", "fadeInDown", "fadeInDown", "fadeInDown", "fadeInDown"];
-  const rand = animate[Math.floor(Math.random() * animate.length)];
-  exercise.classList.add(rand);
+  exercise.classList.add("fadeInDown");
 });
-
 
 //Moods animate
 const moods = document.querySelectorAll(".moods-card-category");
 moods.forEach((mood) => {
-  const animate = ["fadeInDown","fadeInDown","fadeInDown","fadeInDown","fadeInDown","fadeInDown",];
-  const rand = animate[Math.floor(Math.random() * animate.length)];
-  mood.classList.add(rand);
+  mood.classList.add("fadeInDown");
 });
-
-
-
-console.log(gon.userAchivementsRatings);
-console.log(gon.userAchivementsDates);
-
 
 var Highcharts = require('highcharts');
 
@@ -58,7 +42,8 @@ var Highcharts = require('highcharts');
 require('highcharts/modules/exporting')(Highcharts);
 
 // Create the chart
-Highcharts.chart('container', {
+if (typeof gon !== 'undefined') {
+  Highcharts.chart('container', {
     chart: {
         type: 'spline',
         backgroundColor: '#F7F3ED',
@@ -104,20 +89,15 @@ Highcharts.chart('container', {
         }
     },
     series: [{
-        name: 'Follow your achievement!',
-        marker: {
-            symbol: 'round'
-        },
-        data: gon.userAchivementsRatings
-        // data: [2, 2, 5, 1, 3, 5, 2, {
-        //     y: 5,
-        //     marker: {
-        //         symbol: 'url(https://www.highcharts.com/samples/graphics/sun.png)'
-        //    }
-        // }, 3, 3, 3, 5]
-
+      name: 'Follow your achievement!',
+      marker: {
+          symbol: 'round'
+      },
+      data: gon.userAchivementsRatings
     }]
-});
+  });
+}
+
 
 
 
