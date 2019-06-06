@@ -20,16 +20,14 @@
   box-shadow: 2px 2px 1px 1px rgba(211, 200, 177, 0.7);
 
   //box-shadow: 2px 2px 1px 1px rgba(0, 0, 250, .1);
-  width: 300px;
-  height: 300px;
+  width: 270px;
+  height: 270px;
 
   margin: 8px;
   background-image: url("https://i.pinimg.com/564x/8a/e0/b8/8ae0b80c16498671ec54914f284470c5.jpg");
   opacity: 0.8;
   background-size: cover;
-}
-
-a {
+}a {
     text-decoration: none;
     color: #C72C41;
     &:hover {
@@ -38,9 +36,9 @@ a {
     }
   }
 
-
 .mood-index-wrapper {
   height: calc(100vh - 70px);
   margin-top: 60px;
 }
+
 
