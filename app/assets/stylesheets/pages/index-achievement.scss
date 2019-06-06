@@ -1,10 +1,12 @@
 .first-dash-container {
   background-color: white;
+  height: 100vh;
 }
 
 .dashboard-container {
   background-color: white;
   position: relative;
+  margin-top: -35px;
 }
 
 .dashboard-wrapper-right {
@@ -14,7 +16,7 @@ align-items: center;
 
 .dash-wrapper-left {
 overflow-y: scroll;
-height: 550px;
+height: 500px;
 width: 90%;
 border-radius: 3px;
 border: #F7F3ED solid 1px;
@@ -72,7 +74,7 @@ font-size: 24px;
 .exercises-link {
   font-family: 'Quicksand', sans-serif;
   position: absolute;
-  bottom: 20px;
+  bottom: 30px;
   right: 30px;
   font-size: 16px;
   padding: 16px;
@@ -107,6 +109,3 @@ font-size: 24px;
   color: white;
   font-weight: bolder;
 }
-
-
-
