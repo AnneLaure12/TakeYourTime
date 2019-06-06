@@ -5,7 +5,6 @@
 }
 
 h1 {
-  font-family: 'josefin';
   color: gray;
   opacity: .9;
   text-align: center;
@@ -47,9 +46,10 @@ h1 {
 }
 
 .exo-form{
-  position: absolute;
-  left: 500px;
-  top: 120px;
+  // position: absolute;
+  margin-bottom: 2%;
+  margin-left: 40%;
+  // top: 120px;
   color:: #C72C41;
   font-family: 'Quicksand', sans-serif;
   font-weight: bolder;

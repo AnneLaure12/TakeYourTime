@@ -1,9 +1,9 @@
-<h1 style= "padding-top: 24px;"> Book your class !</h1>
+<h1 class="classes-title pt-5"> Book your class !</h1>
 
 <div class="general-new-bookings">
   <div class="new-booking">
       <%= simple_form_for [@teacher, @booking] do |f| %>
-        <%= f.input :title %>
+        <%= f.input :title, label: false%>
         <%= f.submit ' G O  ! ', class: "new-bookings-btn"%>
       <% end %>
   </div>
