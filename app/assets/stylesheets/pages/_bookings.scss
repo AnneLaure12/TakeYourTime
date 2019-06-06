@@ -21,15 +21,19 @@
   font-weight: bolder;
 }
 
-a {
+.achievement-link{
   color: #c82e42;
   text-decoration: none;
   margin-top: 32px;
   font-family: 'Quicksand', sans-serif;;
   font-weight: lighter;
   padding: 16px;
+<<<<<<< HEAD
 
 }a:hover {
+=======
+}.achievement-link:hover {
+>>>>>>> 13abef36e736e0e1c6d1d0caba944e62e617b583
   text-decoration: none;
   color: #c82e42;
   opacity: .8;
