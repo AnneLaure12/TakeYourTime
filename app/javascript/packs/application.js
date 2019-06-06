@@ -5,8 +5,8 @@ import { initMapbox } from '../plugins/init_mapbox';
 import { handleSlider } from '../plugins/handle_slider';
 
 initSweetalert('#sweet-alert-demo', {
-  title: "Congratulations !",
-  // text: "Your daily exercise is done !",
+  title: "Congratulations",
+  text: "Your daily exercise is done !",
   icon: "success"
 }, (value) => {
   if (value) {
@@ -45,8 +45,11 @@ require('highcharts/modules/exporting')(Highcharts);
 if (typeof gon !== 'undefined') {
   Highcharts.chart('container', {
     chart: {
+        width: 880,
+        height: 500,
         type: 'spline',
         backgroundColor: '#F7F3ED',
+        color: 'red',
         borderRadius: 5,
         style: {
             fontFamily: 'Quicksand',
@@ -93,6 +96,7 @@ if (typeof gon !== 'undefined') {
       marker: {
           symbol: 'round'
       },
+      color: '#C72C41',
       data: gon.userAchivementsRatings
     }]
   });

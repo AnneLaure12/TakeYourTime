@@ -4,8 +4,9 @@
   background-color: #FFFFFF;
 
   h1 {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     padding-bottom: 20px;
+    margin-top: -20px;
   }
 
   h2 {
@@ -18,14 +19,19 @@
   padding-bottom: 15px;
   color: black;
   text-align: center;
+  margin-top: 20px;
   }
 
   h3 {
     font-family: 'Pacifico', cursive;
     color: black;
-    margin-top: 16px;
+    margin-top: 25px;
     opacity: 0.8;
 
+  }
+
+  p {
+    font-family: 'Quicksand', sans-serif;
   }
 }
 
@@ -41,6 +47,16 @@
   justify-content: space-around;
   align-items: center;
 }
+
+.shuffle-text {
+  position: absolute;
+  top: 229px;
+  left: 55px;
+  width: 250px;
+  height: 200px;
+  font-size: 20px;
+}
+
 
 
 
@@ -134,7 +150,23 @@
 
 .swal-modal {
   font-family: 'pacifico', cursive;
-  opacity: 1;
+  color: black;
+}
+
+.swal-title {
+  color: black;
+  opacity: 0.8;
+}
+
+.swal-button {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 18px;
+}
+
+.swal-text {
+  font-size: 28px;
+  color: black;
+  opacity: 0.8;
 }
 
 .swal-button--confirm:focus {

@@ -6,9 +6,10 @@
 
   <div class="exercise-show-global-content">
 
+      <p class="shuffle-text">If the exercise doesn't suits you, you can change once!</p>
       <div class="exercise-show-shuffle">
         <% unless @remove_btn %>
-            <%= link_to 'Shuffle', exercice_path(select_another_exos(@exercices,
+            <%= link_to 'Change', exercice_path(select_another_exos(@exercices,
             @exercice, @mood), remove_btn: true), class: "btn show-exercise-btn shuffle" %>
           <% else %>
             <div id="blank-shuffle"></div>
