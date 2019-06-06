@@ -2,19 +2,6 @@
 
 <div class="teacher-box">
   <div class="row">
-
-    <div class="col-lg-6">
-      <div class="teacher-left"> <!--dash-wraper-->
-        <% @teachers.each do |teacher| %>
-          <div class="border" style='border: 1px solid gray;'> <!--card-product-->
-            <img src="https://i.pinimg.com/564x/8a/e0/b8/8ae0b80c16498671ec54914f284470c5.jpg">
-            <p><%="The yoga studio #{teacher.name} situated at #{teacher.address} is waiting you for #{teacher.description}."%></p>
-            <%= link_to "Book a class", new_teacher_booking_path(teacher), class: "teacher-index-btn" %>
-          </div>
-        <% end %>
-      </div>
-    </div>
-
     <div class="col-lg-6" >
       <div class="teacher-right"><!--Map here -->
         <div
@@ -23,6 +10,18 @@
           data-markers="<%= @markers.to_json %>"
           data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
         ></div>
+      </div>
+    </div>
+
+    <div class="col-lg-6" >
+      <div class="teacher-left"> <!--dash-wraper-->
+        <% @teachers.each do |teacher| %>
+          <div class="border" style='border: 1px solid gray;'> <!--card-product-->
+            <%= image_tag("#{teacher.name}-photo.jpg") %>
+            <p><%="Come practice at #{teacher.name}, located on the #{teacher.address}. The studio is offering #{teacher.description}!"%></p>
+            <%= link_to "Book a class", new_teacher_booking_path(teacher), class: "teacher-index-btn" %>
+          </div>
+        <% end %>
       </div>
     </div>
   </div>

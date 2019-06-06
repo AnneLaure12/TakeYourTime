@@ -106,12 +106,15 @@ achievement1, achievement2 = Achievement.all
 
 puts "Creating classs..."
 
-Teacher.create!(name: "Yoga Karakam", address: "59 Cours Saint-Louis, 33300 Bordeaux", description: "Nice yoga and meditation class", latitude: nil, longitude: nil)
-Teacher.create!(name: "Yoga Bikram", address: "26 Cours de la Martinique, 33000 Bordeaux", description: "Dynamic yoga class", latitude: nil, longitude: nil)
-Teacher.create!(name: "Zen & Dance Yoga", address: "55 Cours du Médoc, 33300 Bordeaux", description: "Good yoga class in Bordeaux", latitude: nil, longitude: nil)
-Teacher.create!(name: "Cocoon Yoga", address: "17 Rue Charles Puyo, 33300 Bordeaux", description: "Smooth meditation class", latitude: nil, longitude: nil)
-Teacher.create!(name: "Body To Soul Yoga ", address: "14 Rue des Frères Portmann, 33300 Bordeaux", description: "Nice dynamic & dancing yoga", latitude: nil, longitude: nil)
-Teacher.create!(name: "Yogavita", address: "13 Rue de Leybardie, 33300 Bordeaux", description: "Wonderful class with yoga & meditation", latitude: nil, longitude: nil)
+Teacher.create!(name: "Yoga Karakam", address: "59 Cours Saint-Louis, 33300 Bordeaux", description: "transformative meditation classes", latitude: nil, longitude: nil)
+Teacher.create!(name: "Yoga With You", address: "38 quai de Bacalan, 33300 Bordeaux", description: "all types of yoga in a peaceful surroundings", latitude: nil, longitude: nil)
+Teacher.create!(name: "Yoga Bikram", address: "26 Cours de la Martinique, 33000 Bordeaux", description: "dynamic yoga classes", latitude: nil, longitude: nil)
+Teacher.create!(name: "Zen and Dance Yoga", address: "55 Cours du Médoc, 33300 Bordeaux", description: "good yoga classes in Bordeaux", latitude: nil, longitude: nil)
+Teacher.create!(name: "Cocoon Yoga", address: "17 Rue Charles Puyo, 33300 Bordeaux", description: "smooth meditation classes", latitude: nil, longitude: nil)
+Teacher.create!(name: "Body To Soul Yoga", address: "14 Rue des Frères Portmann, 33300 Bordeaux", description: "nice dynamic & dancing yoga", latitude: nil, longitude: nil)
+Teacher.create!(name: "Yogavita", address: "13 Rue de Leybardie, 33300 Bordeaux", description: "wonderful class with yoga & meditation", latitude: nil, longitude: nil)
+Teacher.create!(name: "Trishula", address: "Impasse Barreyre Deuxième, 33300 Bordeaux", description: "Iyengar classes", latitude: nil, longitude: nil)
+Teacher.create!(name: "Obraze", address: "4 place Saint Martial, 33300 Bordeaux", description: " Hatha Yoga ", latitude: nil, longitude: nil)
 
 puts "Finished !"
 
