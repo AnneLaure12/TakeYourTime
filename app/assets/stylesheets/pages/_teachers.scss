@@ -53,9 +53,9 @@
   display : flex;
   font-family: 'Nanum Myeongjo', serif;
 }img{
-  height: 100%;
+  height: auto;
   width: 120px;
-  object-fit: cover;
+  object-fit: contain;
 }
 .border p {
   font-size: 12px;

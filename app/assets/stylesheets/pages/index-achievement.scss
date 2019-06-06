@@ -18,6 +18,9 @@ height: 550px;
 width: 90%;
 border-radius: 3px;
 border: #F7F3ED solid 1px;
+font-family: 'Quicksand', sans-serif;
+font-weight: bold;
+font-size: 24px;
 }
 
 .card-product {
@@ -27,8 +30,9 @@ border: #F7F3ED solid 1px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display : flex;
-  font-family: 'Quicksand', sans-serif;
-  font-weight: bold;
+  // font-family: 'Quicksand', sans-serif;
+  // font-weight: bold;
+  // font-size: 24px;
 }
 
 .dashboard-date {
@@ -54,9 +58,11 @@ border: #F7F3ED solid 1px;
 .card-product p {
   font-size: 12px;
   line-height: 1.4;
-  opacity: .7;
+  opacity: .8;
   margin-bottom: 0;
   margin-top: 8px;
+  color: black;
+  font-weight: bold;
 }
 
 .card-product .card-product-infos {
