@@ -2,6 +2,7 @@ import "bootstrap";
 import { initSweetalert } from '../plugins/init_sweetalert';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import { initMapbox } from '../plugins/init_mapbox';
+import { handleSlider } from '../plugins/handle_slider';
 
 initSweetalert('#sweet-alert-demo', {
   title: "Congratulations !",
@@ -16,6 +17,7 @@ initSweetalert('#sweet-alert-demo', {
 
 
 initMapbox();
+handleSlider();
 
 
 //Exrcises animate

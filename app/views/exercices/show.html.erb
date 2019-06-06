@@ -4,13 +4,6 @@
     <h1><%= @exercice.name %></h1>
   </div>
 
-
-
-
-
-
-
-
   <div class="exercise-show-global-content">
 
       <div class="exercise-show-shuffle">
@@ -40,25 +33,18 @@
 
       <button id="sweet-alert-demo" class="btn show-exercise-btn done">Done!</button>
 
-
-
-
   </div>
-
-
-
 
     <div class="exercise-show-review">
 
       <h2>How was your exercise ?</h2>
-      <p>Move the cursor according to your new mood !</p>
-
 
       <div class="exercises-show-full-sliderbar">
         <%= simple_form_for [@exercice, @achievement] do |f| %>
         <div class="slidecontainer">
           <input type="range" min="0" max="5" value="0" class="slider" id="achievement_rating" name="achievement[rating]">
         </div>
+        <h3 class="text-center" id='sliderFeedback'>Move the cursor according to your new mood !</h3>
       </div>
         <%= f.button :submit, "Done!", class: "d-none", id: "submit-button" %>
       <% end %>
