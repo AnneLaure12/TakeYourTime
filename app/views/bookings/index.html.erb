@@ -11,7 +11,7 @@
 
       <img src="https://i.pinimg.com/564x/8a/e0/b8/8ae0b80c16498671ec54914f284470c5.jpg">
 
-      <p> <%= "#{booking.user.first_name} your studio is #{booking.teacher.name},#{booking.teacher.address} and start on #{booking.date.strftime("%A %e %B")}." %></p>
+      <p class="booking-card-description"> <%= "#{booking.user.first_name} your studio is #{booking.teacher.name},#{booking.teacher.address} and start on #{booking.date.strftime("%A %e %B")}." %></p>
         <%= link_to 'cancel', booking_path(booking),
           method: :delete,
           data: { confirm: "Are you sure?" },

@@ -1,6 +1,8 @@
 <h1> Book your class !</h1>
 
-<%= simple_form_for [@teacher, @booking] do |f| %>
-  <%= f.input :title %>
-  <%= f.submit ' G O  ! '%>
-<% end %>
+<div class="new-booking", style="">
+    <%= simple_form_for [@teacher, @booking] do |f| %>
+      <%= f.input :title %>
+      <%= f.submit ' G O  ! '%>
+    <% end %>
+</div>
