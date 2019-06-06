@@ -1,6 +1,10 @@
-<h1> Book your class !</h1>
+<h1 style= "padding-top: 24px;"> Book your class !</h1>
 
-<%= simple_form_for [@teacher, @booking] do |f| %>
-  <%= f.input :title %>
-  <%= f.submit ' G O  ! '%>
-<% end %>
+<div class="general-new-bookings">
+  <div class="new-booking">
+      <%= simple_form_for [@teacher, @booking] do |f| %>
+        <%= f.input :title %>
+        <%= f.submit ' G O  ! ', class: "new-bookings-btn"%>
+      <% end %>
+  </div>
+</div>
