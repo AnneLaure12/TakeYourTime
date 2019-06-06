@@ -26,22 +26,30 @@
 }
 
 .achievement-link{
+  display: flex;
+  align-items: center;
+  height: 70px;
+  width: 150px;
   position: absolute;
-  right: 30px;
-  bottom: 30px;
+  right: 100px;
+  bottom: 100px;
+  padding: 32px;
+  padding-left: 40px;
+  margin-top: 32px;
   border: 2px solid #c82e42;
   border-radius: 30px;
   color: #c82e42;
-  text-decoration: none;
-  margin-top: 32px;
-  font-family: 'Quicksand', sans-serif;;
+  font-size: 16px;
   font-weight: bolder;
-  padding: 8px;
+  text-decoration: none;
+  font-family: 'Quicksand', sans-serif;;
 }.achievement-link:hover {
   opacity: .8;
   font-family: 'Quicksand', sans-serif;;
   text-decoration: none;
   font-weight: bolder;
+  background-color: #c82e42;
+  color: white;
 }
 
 .delete-b {
