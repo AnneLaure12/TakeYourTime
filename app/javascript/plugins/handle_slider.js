@@ -7,10 +7,10 @@ const displaySliderValue = (event) => {
 
   switch (sliderValue) {
     case '0':
-      sliderFeedback.innerText = 'Tired'
+      sliderFeedback.innerText = 'Not better'
       break;
     case '1':
-      sliderFeedback.innerText = 'OK'
+      sliderFeedback.innerText = 'Neutral'
       break;
     case '2':
       sliderFeedback.innerText = 'Not bad'
