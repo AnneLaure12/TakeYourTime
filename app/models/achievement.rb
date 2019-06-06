@@ -5,5 +5,4 @@ class Achievement < ApplicationRecord
 
   validates :date, presence: true
   validates :rating, inclusion: { in: 0..5 }, presence: true
-
 end
