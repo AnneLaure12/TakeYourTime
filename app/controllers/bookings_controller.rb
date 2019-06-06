@@ -15,7 +15,7 @@ class BookingsController < ApplicationController
     @booking.date = Time.now
     @booking.user = current_user
     if @booking.save
-      redirect_to bookings_path
+      redirect_to bookings_path(@teacher)
     else render :new
     end
   end

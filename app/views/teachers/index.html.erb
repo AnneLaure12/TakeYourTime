@@ -9,7 +9,12 @@
             <%= image_tag("#{teacher.name}-photo.jpg") %>
             <p><%="Come practice at #{teacher.name}, located on the #{teacher.address}. The studio is offering #{teacher.description}!"%></p>
 
-              <%= link_to "Book a class", bookings_path(teacher), class: "teacher-link-a" %>
+              <% @teacher = teacher %>
+              <%# /teachers/:teacher_id/bookings %>
+              <%= simple_form_for([@teacher, @booking], method: :post) do |f| %>
+                <%= f.association :teacher, selected: params[:teacher_id], label: false, input_html: { class: 'd-none' } %>
+                <%= f.submit 'Book a class', class: "teacher-link-a"%>
+              <% end %>
 
           </div>
         <% end %>

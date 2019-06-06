@@ -1,8 +1,8 @@
 class TeachersController < ApplicationController
   def index
-    @teachers = Teacher.all
-
+    # @teachers = Teacher.all
     @teachers = Teacher.where.not(latitude: nil, longitude: nil)
+    @booking = Booking.new()
 
     @markers = @teachers.map do |teacher|
       {
@@ -11,6 +11,7 @@ class TeachersController < ApplicationController
         infoWindow: render_to_string(partial: "infowindow", locals: { teacher: teacher }),
         image_url: helpers.asset_url('mark2.jpg')
       }
+
     end
   end
 end
