@@ -5,9 +5,7 @@ import { initMapbox } from '../plugins/init_mapbox';
 
 initSweetalert('#sweet-alert-demo', {
   title: "Congratulations !",
-  text: "Your daily exercise is done !",
-  confirmButtonColor: '#DD6B55',
-  confirmButtonText: 'Yes',
+  // text: "Your daily exercise is done !",
   icon: "success"
 }, (value) => {
   if (value) {

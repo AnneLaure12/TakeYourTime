@@ -29,7 +29,7 @@
           <% elsif @exercice.photo.present? %>
             <div class="image-exercise"> <%= image_tag((@exercice.photo), class: "mx-auto d-block")%></div>
           <% elsif @exercice.video.present? %>
-            <iframe width="600" height="400" src="<%= @exercice.video %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="600" height="335" src="<%= @exercice.video %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           <% end %>
 
         </div>
