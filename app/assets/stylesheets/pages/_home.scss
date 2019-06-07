@@ -50,17 +50,12 @@ a {
 .home-container {
   width : 100vw;
   height: 100vh;
-  // position: absolute;
-  // bottom:0;
-  // right: 0;
-
   background-image: asset-url('homepage_picture.jpg');
-  //filter: grayscale(100%);
   background-size: cover;
-  // background-blend-mode: saturation;
   background-position: center;
   font-family: 'Pacifico', cursive;
   position: relative;
+  display: flex;
 }
 
 .home-title {
@@ -69,19 +64,15 @@ a {
   font-weight: lighter;
 }
 
-.card {
+.card-home {
   position: relative;
   display: flex;
-  justify-content: between;
   height: 425px;
   width: 375px;
   background-color: rgba(247, 243, 237, 0.8);
   display: flex;
   justify-content: space-around;
   padding: 20px;
-  position: absolute;
-  margin-top: 10%;
-  margin-left: 140px;
   border-radius: 5px;
   box-shadow: 1px 1px #ACA1AB;
 }
@@ -100,8 +91,19 @@ a {
   font-size: 18px;
   padding-top: 60px;
   font-family: 'Quicksand', sans-serif;
-  // font-family: 'Pacifico', cursive;
   font-weight: lighter;
   color: black;
   opacity: 0.9;
+}
+
+.home-left {
+  flex: 1;
+  padding: 0 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.home-right {
+  flex: 2;
 }

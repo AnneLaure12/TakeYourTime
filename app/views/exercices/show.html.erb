@@ -1,22 +1,23 @@
 <div class="exercise-show-background">
+  <div class="exercise-show-wrapper">
+    <div class="exercise-show-title pt-5">
+      <h1><%= @exercice.name %></h1>
+    </div>
 
-  <div class="exercise-show-title pt-5">
-    <h1><%= @exercice.name %></h1>
-  </div>
-
-  <div class="exercise-show-global-content">
-
-      <p class="shuffle-text">If the exercise doesn't suits you, you can change once!</p>
-      <div class="exercise-show-shuffle">
-        <% unless @remove_btn %>
+    <div class="exercise-show-global-content">
+      <div class="left-button text-center">
+        <p class="shuffle-text">If the exercise doesn't suits you,<br/> you can change once!</p>
+        <div class="exercise-show-shuffle">
+          <% unless @remove_btn %>
             <%= link_to 'Change', exercice_path(select_another_exos(@exercices,
-            @exercice, @mood), remove_btn: true), class: "btn show-exercise-btn shuffle" %>
+              @exercice, @mood), remove_btn: true), class: "btn show-exercise-btn shuffle" %>
           <% else %>
             <div id="blank-shuffle"></div>
           <% end %>
+        </div>
       </div>
 
-      <div class="exercise-show-card-exercise">
+      <div class="exercise-show-card-exercise text-center">
         <div class="image-box">
           <% if @exercice.description.present? %>
             <p class="exercice-description"><%= @exercice.description %></p>
@@ -25,21 +26,16 @@
           <% elsif @exercice.video.present? %>
             <iframe width="600" height="335" src="<%= @exercice.video %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           <% end %>
-
         </div>
+      </div>
 
-        </div>
-
-
-
-      <button id="sweet-alert-demo" class="btn show-exercise-btn done">Done</button>
-
-  </div>
+      <div class="right-button text-center">
+        <button id="sweet-alert-demo" class="btn show-exercise-btn done">Done</button>
+      </div>
+    </div>
 
     <div class="exercise-show-review">
-
       <h2>How do you feel after your exercise?</h2>
-
       <div class="exercises-show-full-sliderbar">
         <%= simple_form_for [@exercice, @achievement] do |f| %>
         <div class="slidecontainer">
@@ -49,11 +45,6 @@
       </div>
         <%= f.button :submit, "Done!", class: "d-none", id: "submit-button" %>
       <% end %>
-
-
-
     </div>
-
-
-
+  </div>
 </div>

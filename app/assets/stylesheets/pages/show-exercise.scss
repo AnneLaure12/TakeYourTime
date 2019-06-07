@@ -2,6 +2,9 @@
   width: 100vw;
   height: 100vh;
   background-color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 
   h1 {
     margin-bottom: 20px;
@@ -35,6 +38,14 @@
   }
 }
 
+.right-button {
+  flex: 1
+}
+
+.left-button {
+  flex: 1;
+  margin-bottom: 5%;
+}
 
 .image-exercise img {
   width: 600px;
@@ -44,47 +55,32 @@
 
 .exercise-show-global-content {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 
 .shuffle-text {
-  position: absolute;
-  top: 210px;
-  left: 55px;
-  width: 250px;
-  height: 60px;
+  // position: absolute;
+  // top: 210px;
+  // left: 55px;
+  // width: 250px;
+  // height: 60px;
   font-size: 20px;
 }
-
-
-
-
 
 .exercise-show-card-exercise {
   display: flex;
   flex-direction: column;
-  // border: solid;
-  // border-width: 1px;
-  // border-color: #6E697D;
-  // height: 400px;
-  // width: 600px;
   border-radius: 5px;
   opacity: 0.9;
-  // box-shadow: 1px 1px #6E697D;
   box-shadow: 0 0 0px rgba(0,0,0,0);
-  // -moz-box-shadow: 0 1px 2px rgba(34,25,25,0.4);
-  // -webkit-box-shadow: 0 1px 3px rgba(34, 25, 25, 0.4);
-
+  flex: 2;
 }
 
 .exercice-description {
   text-align: center;
-  vertical-align: center;
   font-family: 'Nanum Myeongjo', serif;
   font-size: 28px;
-  height: 335px;
-  width: 600px;
 }
 
 

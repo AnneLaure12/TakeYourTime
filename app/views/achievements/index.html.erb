@@ -1,39 +1,41 @@
 <%= include_gon %>
 
 <div class= "first-dash-container">
- <div class= "achievements-title-wrapper pt-5">
-<h1>Achievements</h1>
-  </div>
+  <div class="first-dash-wrapper">
+    <div class= "achievements-title-wrapper pt-5">
+      <h1>Achievements</h1>
+    </div>
 
-<div class= "dashboard-container">
-  <p class= "scroll-title"> Your daily exercises </p>
+    <div class= "dashboard-container">
+      <p class= "scroll-title"> Your daily exercises </p>
 
-  <div class="container-fluid mr-5 ml-5">
-    <div class="row">
-      <div class="col-4">
-        <div class= "dash-wrapper-left">
-          <% @achievements.reverse.each do | achievement | %>
-            <div class="card-product">
-              <img src="https://i.pinimg.com/564x/8a/e0/b8/8ae0b80c16498671ec54914f284470c5.jpg">
-              <div class="card-product-infos">
-               <span class= "dashboard-list">
-                <p class= "dashboard-date"><strong><%= achievement.date.strftime("%e/%m/%Y")%></strong> </p>
-                <p class= "dashboard-phrase"><%= "Today you were #{achievement.mood.name}. During the time you took for yourself, you did a #{achievement.exercice.name} exercise. You now feel on a #{achievement.rating} level. Keep going that way to improve your mood !" %></p>
-                </span>
-              </div>
+      <div class="container-fluid mr-5 ml-5">
+        <div class="row">
+          <div class="col-4">
+            <div class= "dash-wrapper-left">
+              <% @achievements.reverse.each do | achievement | %>
+                <div class="card-product">
+                  <img src="https://i.pinimg.com/564x/8a/e0/b8/8ae0b80c16498671ec54914f284470c5.jpg">
+                  <div class="card-product-infos">
+                   <span class= "dashboard-list">
+                    <p class= "dashboard-date"><strong><%= achievement.date.strftime("%e/%m/%Y")%></strong> </p>
+                    <p class= "dashboard-phrase"><%= "Today you were #{achievement.mood.name}. During the time you took for yourself, you did a #{achievement.exercice.name} exercise. You now feel on a #{achievement.rating} level. Keep going that way to improve your mood !" %></p>
+                    </span>
+                  </div>
+                </div>
+              <% end %>
             </div>
-          <% end %>
-        </div>
-      </div>
+          </div>
 
-      <div class="col-8">
-        <div class= "dashboard-wrapper-right">
-          <div id="container" style="width: 950px; height: 550px; margin: 0 auto"></div>
+          <div class="col-8">
+            <div class= "dashboard-wrapper-right">
+              <div id="container" style="width: 950px; height: 550px; margin: 0 auto"></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 
   <div class= "exercises-link">
     <%= link_to "More time", exercices_path(@exercice), class: "btn-to-exercices" %>
