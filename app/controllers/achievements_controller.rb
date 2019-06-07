@@ -6,7 +6,7 @@ class AchievementsController < ApplicationController
   end
 
   def index
-    @achievements = current_user.achievements
+    @achievements = current_user.achievements.sort_by{|achievement| achievement.date}
     gon.userAchivementsRatings = []
     gon.userAchivementsDates = []
     @achievements.each do |achievement|
